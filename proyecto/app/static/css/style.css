@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.logo_titu {
+    color: #16a374;
+    text-shadow: #4EBE7B 0.1em 0.1em 0.2em;
+    font-style: italic;
+    text-align: center;
+    font-size: 30px;
+}
+
+.navbar-nav {
+    margin-left: 80px;
+    /*  border: 3px solid #4EBE7B;
+    border-radius: 25px; */
+    border: groove 2px rgb(155, 212, 178);
+    border-radius: 70px;
+    width: 1000px;
+    height: 100px;
+}
+
+.nav-link {
+    text-align: center;
+    font-size: 20px;
+    margin-left: 65px;
+    margin-top: 25px;
+    color: #4EBE7B;
+}

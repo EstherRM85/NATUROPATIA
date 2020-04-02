@@ -1,0 +1,56 @@
+{% load static %} {% load bootstrap4 %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Natural Holistic</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Hojas de estilo -->
+    <link rel="stylesheet" href="{% static 'css/style.css'%}" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-sm bg-white navbar-white">
+        <!-- Brand/logo -->
+        <a class="navbar-brand" href="#">
+            <img src="{% static 'img/unnamed.png' %}" alt="logo" style="width:150px;">
+        </a>
+        <h3 class="logo_titu">   MEDICINA <br> ALTERNATIVA</h3>
+
+        <!-- Links -->
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#">SOBRE MI </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">TRATAMIENTOS</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">PATOLOGÍAS</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">BLOG</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">TESTIMONIOS</a>
+            </li>
+        </ul>
+    </nav>
+
+    {% block content%} {% endblock content%}
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
