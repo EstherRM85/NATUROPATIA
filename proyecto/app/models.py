@@ -1,5 +1,6 @@
 from django.db import models
 
+
 # Create your models here.
 
 class Info(models.Model):
@@ -31,3 +32,10 @@ class EntradaBlog(models.Model):
     descripcion = models.TextField(null=True)
     fecha = models.DateTimeField()
     imagen = models.ImageField(upload_to='static/img')
+
+class Video(models.Model):
+    name= models.CharField(max_length=500)
+    videofile= models.FileField(upload_to='videos/', null=True, verbose_name="")
+
+    def __str__(self):
+        return self.name + ": " + str(self.videofile)
