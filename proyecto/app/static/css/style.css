@@ -28,3 +28,12 @@
     margin-top: 25px;
     color: #4EBE7B;
 }
+
+.video {
+    width: '700';
+    height: '200' object-position;
+}
+
+.col-sm-4{
+    float: left;
+}
