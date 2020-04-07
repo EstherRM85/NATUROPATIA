@@ -1,0 +1,19 @@
+{% extends 'app/index.html' %} {% load static %} {% load bootstrap4 %} {% block content%}
+
+<div class="row row-cols-1 row-cols-md-3">
+    {% for p in tra %}
+    <div class="col">
+        <p></p>
+        <div class="col-md-12">
+            <h5><a class="nav-link" href="{% url 'app:index' %}">{{ p.nombre }}</a></h5>
+            <div class="card-deck">
+                <div class="card">
+                    <img src="{{ p.imagen.url }}">
+                </div>
+            </div>
+        </div>
+
+    </div>
+    {% endfor %}
+</div>
+{endo block%}

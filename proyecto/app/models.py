@@ -4,11 +4,20 @@ from django.db import models
 # Create your models here.
 
 class Info(models.Model):
-    titulo = models.CharField(max_length=80, null=True)
-    texto = models.TextField(null= True)
+    tituloPrincipal = models.CharField(max_length=80, null=True)
     logo = models.ImageField(upload_to='static/img')
-    tel = models.TextField(null=True)
-    #campos_footer 
+    tituloCentro = models.CharField(max_length=80, null=True)
+    textoCentro = models.TextField(null=True)
+    imagenCentro = models.ImageField(upload_to='static/img')
+    tituloPerfil = models.CharField(max_length=80, null=True)
+    textoPerfil = models.TextField(null=True)
+    imagenPerfil = models.ImageField(upload_to='static/img')
+    direccion = models.CharField(max_length=80, null=True)
+    tel = models.IntegerField(null= True,blank=True)
+    mail = models.EmailField(null= True,blank=True)
+    horario = models.IntegerField(null= True,blank=True)
+    
+    #redes
     
 class Tratamiento(models.Model):
     nombre = models.CharField(max_length=80, null= True)

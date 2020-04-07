@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import View,ListView,TemplateView
-from .models import Video, Tratamiento
+from .models import Video, Tratamiento,Info
 from .forms import VideoForm
 
 # Create your views here.
@@ -15,6 +15,7 @@ class Index(TemplateView):
         #context['videofile']=Video.objects.all()
         lastvideo= Video.objects.all()[0]
         context['videofile']= lastvideo.videofile
+        context['mi']= Info.objects.all()
         return context
 
 class Tratamiento(ListView):
@@ -22,5 +23,12 @@ class Tratamiento(ListView):
     template_name = 'app/tratamientos.html'
     context_object_name= 'tra' 
     queryset = Tratamiento.objects.all()
+    
+"""class SobreMi(ListView):
+    model = Info
+    template_name = 'app/sobremi.html'
+    context_object_name= 'mi' 
+    queryset = Info.objects.all()"""
+    
     
     
