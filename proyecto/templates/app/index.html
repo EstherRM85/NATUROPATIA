@@ -48,7 +48,7 @@
     {% block content%}
     <br><br>
     <div class="responsiveContent">
-        <iframe src=' {{ MEDIA_URL }}{{ videofile }} ' type='video/mp4 ' width="560" allowfullscreen="" frameborder="50|70"></iframe>
+        <iframe src=' {{ MEDIA_URL }}{{ videofile }} ' type='video/mp4 ' width="560" allowfullscreen="" frameborder="50|7000"></iframe>
     </div>
     <br><br>
 
@@ -67,36 +67,117 @@
     </script>
 
     {% for p in mi %}
+        
+            
+        
+            <img class="imagenCentro" src="{{ p.imagenCentro.url }}">
+            
+        <div class="contenedor">
+            <h5 class="titulo_centro" href="{% url 'app:sobremi' %}">{{ p.tituloCentro }}</h5><br>
+            <h5 class="texto_centro" href="{% url 'app:sobremi' %}">{{ p.textoCentro }}</h5>
+        </div>
+        
+            <img class="imagenPerfil rounded-circle" src="{{ p.imagenPerfil.url }}">
+        <div class="perfil">
+            <h5 class="tituloPerfil" href="{% url 'app:sobremi' %} ">{{ p.tituloPerfil }}</h5>   
+            <h5 class="texto_perfil" href="{% url 'app:sobremi' %} "></br>{{ p.textoPerfil }}</h5>
+        </div>
+    
+  
+    
 
-    <h5 class="titulos" href="{% url 'app:sobremi' %}">{{ p.tituloCentro }}</h5>
-    <img class="imagenCentro" src="{{ p.imagenCentro.url }}">
-    <h5 class="texto_centro" href="{% url 'app:sobremi' %}">{{ p.textoCentro }}</h5>
+    <!-- Footer -->
+<footer class="page-footer font-small blue-grey lighten-5 HFooter" style="background-color: #21d192;">
 
-    <h5 class="titulos" href="{% url 'app:sobremi' %} ">{{ p.tituloPerfil }}</h5>
-    <img class="imagenCentro " src="{{ p.imagenPerfil.url }} ">
-    <h5 class="texto " href="{% url 'app:sobremi' %} ">{{ p.textoPerfil }}</h5>
-    <h5 class="nav-link " href="{% url 'app:sobremi' %} ">{{ p.direccion }}</h5>
-    <h5 class="nav-link " href="{% url 'app:sobremi' %} ">{{ p.tel }}</h5>
-    <h5 class="nav-link " href="{% url 'app:sobremi' %} ">{{ p.mail }}</h5>
+     
+      <div class="container">
+ 
+        <!-- Grid row-->
+        <div class="row py-4 d-flex align-items-center">
+  
+         
+         {% comment %}  <div class="col-md-6 col-lg-7 text-center text-md-right">
+  
+            <!-- Facebook -->
+            <a class="fb-ic">
+              <i class="fab fa-facebook-f white-text mr-4"> </i>
+            </a>
+            <!-- Twitter -->
+            <a class="tw-ic">
+              <i class="fab fa-twitter white-text mr-4"> </i>
+            </a>
+            <!-- Google +-->
+            <a class="gplus-ic">
+              <i class="fab fa-google-plus-g white-text mr-4"> </i>
+            </a>
+            <!--Linkedin -->
+            <a class="li-ic">
+              <i class="fab fa-linkedin-in white-text mr-4"> </i>
+            </a>
+            <!--Instagram-->
+            <a class="ins-ic">
+              <i class="fab fa-instagram white-text"> </i>
+            </a>
+  
+          </div>
+          <!-- Grid column -->
+  
+        </div>
+        <!-- Grid row-->
+  
+      </div> {% endcomment %}
+    </div>
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left mt-5">
+  
+      <!-- Grid row -->
+      <div class="row mt-3 dark-grey-text">
+  
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mb-4">
+  
+          <!-- Content -->
+          <h6 class="text-uppercase font-weight-bold">Contacto</h6>
+          <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+         
+        </div>
+  
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+  
+          <!-- Links -->
+         
+          <hr class="teal accent-3 mb-4 mt-0  mx-auto" style="width: 40px;">
+          <p>
+            <i class="fas fa-home mr-3"></i>{{ p.direccion }}</p>
+          <p>
+            <i class="fas fa-envelope mr-3"></i>{{ p.mail }}</p>
+          <p>
+            <i class="fas fa-phone mr-3"></i>{{ p.tel }}</p>
+  
+        </div>
+        <!-- Grid column -->
+  
+      
+  
+    </div>
+    <!-- Footer Links -->
+  
+    <!-- Copyright -->
+    <div class="footer-copyright text-center text-black-50 py-3">© 2020 Copyright
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer -->
+
 
     {% endfor %}
-
-
-
 
     <script src='https://img1.wsimg.com/tcc/tcc_l.combined.1.0.6.min.js '></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js "></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js "></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js "></script>
-
-
-
-
-
-
-
-
-
 
     {% endblock content%}
 </body>

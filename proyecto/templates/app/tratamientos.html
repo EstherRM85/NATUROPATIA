@@ -3,11 +3,13 @@
 <div class="row row-cols-1 row-cols-md-3">
     {% for p in tra %}
     <div class="col">
-        <div class="col-md-12">
+        <div class="col-md-12 ">
             <h5><a class="nav-link" href="{% url 'app:index' %}">{{ p.nombre }}</a></h5>
             <div class="card-deck">
-                <div class="card">
+                <div class="card rounded-circle">
+              
                     <img src="{{ p.imagen.url }}">
+                
                 </div>
             </div>
         </div>

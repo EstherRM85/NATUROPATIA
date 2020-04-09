@@ -23,6 +23,9 @@ class Tratamiento(models.Model):
     nombre = models.CharField(max_length=80, null= True)
     descripcion = models.TextField(null= True)
     imagen = models.ImageField(upload_to='static/img')
+    
+    def __str__(self):         
+        return self.nombre
 
 
 class Patologia(models.Model):
