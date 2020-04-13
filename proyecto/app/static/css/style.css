@@ -3,7 +3,9 @@
     padding: 0;
 }
 
-.logo_titu {
+
+
+/*.logo_titu {
     color: #16a374;
     text-shadow: #4EBE7B 0.1em 0.1em 0.2em;
     font-style: italic;
@@ -18,12 +20,12 @@
     width: 1000px;
     height: 100px;
 }
-
+*/
 .nav-link {
     text-align: center;
     font-size: 18px;
     margin-left: 65px;
-    margin-top: 25px;
+    /* margin-top: 25px; */
     color: #4EBE7B;
 }
 
@@ -51,16 +53,16 @@
     text-align: center;
     font-size: 18px;
     margin-left: 6px;
-    margin-top: -50px;
+    margin-top: 50px;
     color: #4EBE7B;
     text-decoration:underline;
 }
 
-/*.texto_centro {
+.texto_centro {
     color: gray;
-    margin-left: 400px;
+    /* margin-left: 400px; */
     position: relative;
-}*/
+}
 
 /*img {
     border-radius: 20px;
@@ -68,7 +70,8 @@
 
 .contenedor {
     margin-left: 400px;
-    margin-top: -260px;
+    margin-top: 50px;
+
 }
 /* .texto_centro {
     margin-top: -230px;
@@ -79,22 +82,108 @@
     text-decoration:underline;
     
 }
-.imagenPerfil{
-    margin-top: 200px;
-    margin-left: 800px;
-}
+ .imagenPerfil{
+  
+    margin-left: 100px;
+} 
 /*.texto_perfil {
     margin-top: -100px;
 }*/
 .perfil {
-    margin-top: -150px;
+    margin-top: 90px;
     width: 500px;
-    float: left;
-    margin-left: 70px;
+  
 }
 
-.HFooter{
-    height: 270px;
+ .footer{
+    background-color:#4EBE7B ;
     width: 100%;
     margin-top: 180px;
+  
+}
+
+
+
+.navbar-default{
+    background-color: #e0f2f1;
+}
+
+.navbar-brand{
+    color:rgb(77, 184, 118);
+}
+
+.navbar-brand:hover{
+    color: rgb(77, 184, 118);
+}
+.iconos{
+    margin: 0 auto;
+  
+    
+}
+
+@media screen and (max-width:800px) {
+    .navbar-nav {
+        width: 100%;
+        border: 0;
+        padding: 0;
+        
+    }
+    
+}
+@media screen and (max-width:800px) {
+.responsiveContent {
+    width: 100%;
+    margin-top: 60px;
+    }
+}
+@media screen and (max-width:800px) {
+    .navbar{
+      
+        text-align: center;
+    }
+    .navbar-nav{
+        margin: 0;
+    }
+    .logo_titu{
+        width: 100%;
+
+        font-size: 30px;
+       
+    }
+    .nav-link{
+    
+        font-size: 20px;
+    
+    }
+}
+@media screen and (max-width:800px) {
+    .texto_centro {
+        width: 100%;
+        font-size: 20px;
+        height: 100%;
+    }
+    .titulo_centro {
+        width: 100%;
+        font-size: 20px;
+        margin-top: 250px;
+    }
+    .imagenCentro {
+       
+        width: 100%;
+        margin-right: 100px;
+     
+    }
+}
+@media screen and (max-width:800px) {
+    .texto_perfil {
+        width: 100%;
+        font-size: 20px;
+        height: 100%;
+    }
+    .imagenPerfil{
+        width: 100%;
+        font-size: 20px;
+        flex: none;
+        justify-content: left;
+    }
 }
