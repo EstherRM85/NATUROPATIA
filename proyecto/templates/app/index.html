@@ -88,12 +88,12 @@
             <h5 class="titulo_centro" href="{% url 'app:sobremi' %}">{{ p.tituloCentro }}</h5><br>
             <h5 class="texto_centro" href="{% url 'app:sobremi' %}">{{ p.textoCentro }}</h5>
       </div>
-      <div class="container-fluid perfil d-flex align-items-center">
-            <div>
+      <div class="row container-fluid perfil d-flex align-items-center">
+            <div class="col-sm-8">
               <h5 class="tituloPerfil" href="{% url 'app:sobremi' %} ">{{ p.tituloPerfil }}</h5>
               <h5 class="texto_perfil float-left mr-5" href="{% url 'app:sobremi' %} "></br>{{ p.textoPerfil }}</h5>
             </div>
-            <img class="imagenPerfil rounded-circle" src="{{ p.imagenPerfil.url }}">
+            <img class="col-sm-4 imagenPerfil rounded-circle" src="{{ p.imagenPerfil.url }}">
       </div>
   
       <div class="container-fluid  footer mr-5">
