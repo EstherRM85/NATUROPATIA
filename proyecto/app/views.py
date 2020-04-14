@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import View,ListView,TemplateView
-from .models import Video, Tratamiento,Info
+from .models import Video, Tratamiento,Info,EntradaBlog
 from .forms import VideoForm
 
 # Create your views here.
@@ -29,6 +29,17 @@ class Tratamiento(ListView):
     template_name = 'app/sobremi.html'
     context_object_name= 'mi' 
     queryset = Info.objects.all()"""
+
+class EntradaBlog(ListView):
+    model =  EntradaBlog
+    template_name = 'app/blog.html'
+    context_object_name= 'blog' 
+    queryset = EntradaBlog.objects.all()
+
+
+
+
+  
     
     
     
