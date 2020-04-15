@@ -45,6 +45,9 @@ class EntradaBlog(models.Model):
     fecha = models.DateTimeField()
     imagen = models.ImageField(upload_to='static/img')
 
+    def __str__(self):         
+        return self.titulo
+
 class Video(models.Model):
     name= models.CharField(max_length=500)
     videofile= models.FileField(upload_to='videos/', null=True, verbose_name="")
