@@ -1,10 +1,10 @@
 {% extends 'app/index.html' %} {% load static %} {% load bootstrap4 %} {% block content%}
-
+<div class="container-fluid mt-4">
 <div class="row row-cols-1 row-cols-md-3">
     {% for p in tra %}
     <div class="col">
         <div class="col-md-12 ">
-            <h5><a class="nav-link titulo-tra" href="{% url 'app:index' %}">{{ p.nombre }}</a></h5>
+            <h5><a class="nav-link titulo-tra mt-4" href="{% url 'app:index' %}">{{ p.nombre }}</a></h5>
             <div class="card-deck">
                 <div class="card rounded-circle">
               
@@ -15,6 +15,7 @@
         </div>
     </div>
     {% endfor %}
+</div>
 </div>
 
 <!-- <div class="card-columns">
