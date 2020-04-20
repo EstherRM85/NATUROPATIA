@@ -7,4 +7,7 @@ urlpatterns = [
     path('sobremi/', Index.as_view(), name = 'sobremi'),
     path('blog/', EntradaBlog.as_view(), name = 'blog'),
     path('infotratamiento/<int:pk>', Infotratamiento.as_view(), name = 'infotratamiento'),
+    path('infoblog/<int:pk>', Infoblog.as_view(), name= 'infoblog'),
+    
+
 ]

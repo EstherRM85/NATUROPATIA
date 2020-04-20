@@ -10,10 +10,12 @@
         <div class="row no-gutters">
           <div class="col-md-6">
             <img src="{{ p.imagen.url }}" class="card-img" alt="...">
+            
           </div>
           <div class="col-md-6">
             <div class="card-body">
-              <h5 class="card-title">{{ p.titulo }}</h5>
+            <h5><a class="nav-link card-title mt-4" href="{% url 'app:infoblog' p.id %}">{{ p.titulo }}</a></h5>
+              <!--<h5><a class="card-title">{{ p.titulo }}</h5></a>-->
               <p class="card-text">{{ p.descripcion }}</p>
               <p class="card-text"><small class="text-muted">{{ p.fecha }}</small></p>
             </div>
