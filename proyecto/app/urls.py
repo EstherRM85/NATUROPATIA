@@ -3,11 +3,11 @@ from .views import *
 
 urlpatterns = [
     path('', Index.as_view(), name='index'),
-    path('tratamientos/', Tratamientos.as_view(), name = 'Tratamientos'),
     path('sobremi/', Index.as_view(), name = 'sobremi'),
-    path('blog/', EntradaBlog.as_view(), name = 'blog'),
+    path('tratamientos/', Tratamientos.as_view(), name = 'Tratamientos'),
     path('infotratamiento/<int:pk>', Infotratamiento.as_view(), name = 'infotratamiento'),
-    path('infoblog/<int:pk>', Infoblog.as_view(), name= 'infoblog'),
+    path('blog/', Blog.as_view(), name = 'blog'),
+    path('infoblog/<int:pk>', InfoBlog.as_view(), name= 'infoblog'),
     
 
 ]

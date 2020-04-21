@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import *
-from .models import Video, Tratamiento,Info,EntradaBlog
+from .models import *
 from .forms import VideoForm
 
 # Create your views here.
@@ -43,24 +43,46 @@ class Infotratamiento(DetailView):
     context_object_name= 'mi' 
     queryset = Info.objects.all()"""
 
-class EntradaBlog(ListView):
+class Blog(ListView):
     model =  EntradaBlog
     template_name = 'app/blog.html'
     context_object_name= 'blog' 
     queryset = EntradaBlog.objects.all()
 
 
-class Infoblog(DetailView):
+class InfoBlog(DetailView):
     template_name = 'app/blog2.html'
     model =  EntradaBlog
 
     def get_context_data(self, **kwargs):
+        textoBlog = EntradaBlog.objects.all()
+        listadoBlog = super(InfoBlog, self).get_context_data(**kwargs)
+        contexto = {'blo':textoBlog}
+        contexto['info'] = EntradaBlog.objects.get(pk = self.kwargs.get('pk',None))
+        return contexto
+
+""" 
+def consultar_cliente(request):
+    plantillaCons = 'applibro/consultarcliente.html'#CREO LA PLANTILLA CONSULTAR
+    listadocliente = Cliente.objects.all()#objects.all GUARDA LO QUE ESTA EN LA TABLA CLIENTE
+    listadolibro = Libro.objects.all()
+    contexto = {'cli':listadocliente}#MANDA DATOS A MI TEMPLATE ATRAVES DEL CONTEXTO
+    contexto['object_list'] = listadocliente #CREO UNA LISTA PARA QUE EL CONTEXTO ME LO ENVIE  """
+
+
+
+
+
+
+"""     template_name = 'app/blog2.html'
+    model =  EntradaBlog
+
+    def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context
-        context = super(Infoblog).get_context_data(**kwargs)
+        context = super(InfoBlog, self).get_context_data(**kwargs)
         # Add in a QuerySet of all the books
         context['informacion'] = EntradaBlog.objects.get(pk = self.kwargs.get('pk',None))
-        return context
-
+        return context """
 
 
   
