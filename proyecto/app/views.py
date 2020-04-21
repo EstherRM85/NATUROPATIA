@@ -31,17 +31,9 @@ class Infotratamiento(DetailView):
 
     def get_context_data(self,**kwargs):
         context=super(Infotratamiento, self).get_context_data(**kwargs)
-        context['tratamiento']= Tratamiento.objects.get(pk = self.kwargs.get('pk',None))
+        context['trat']= Tratamiento.objects.get(pk = self.kwargs.get('pk',None))
         return context
-    
-    
-    
-    
-"""class SobreMi(ListView):
-    model = Info
-    template_name = 'app/sobremi.html'
-    context_object_name= 'mi' 
-    queryset = Info.objects.all()"""
+
 
 class Blog(ListView):
     model =  EntradaBlog
@@ -51,38 +43,13 @@ class Blog(ListView):
 
 
 class InfoBlog(DetailView):
-    template_name = 'app/blog2.html'
+    template_name = 'app/infoBlog.html'
     model =  EntradaBlog
 
     def get_context_data(self, **kwargs):
-        textoBlog = EntradaBlog.objects.all()
-        listadoBlog = super(InfoBlog, self).get_context_data(**kwargs)
-        contexto = {'blo':textoBlog}
-        contexto['info'] = EntradaBlog.objects.get(pk = self.kwargs.get('pk',None))
-        return contexto
-
-""" 
-def consultar_cliente(request):
-    plantillaCons = 'applibro/consultarcliente.html'#CREO LA PLANTILLA CONSULTAR
-    listadocliente = Cliente.objects.all()#objects.all GUARDA LO QUE ESTA EN LA TABLA CLIENTE
-    listadolibro = Libro.objects.all()
-    contexto = {'cli':listadocliente}#MANDA DATOS A MI TEMPLATE ATRAVES DEL CONTEXTO
-    contexto['object_list'] = listadocliente #CREO UNA LISTA PARA QUE EL CONTEXTO ME LO ENVIE  """
-
-
-
-
-
-
-"""     template_name = 'app/blog2.html'
-    model =  EntradaBlog
-
-    def get_context_data(self, **kwargs):
-        # Call the base implementation first to get a context
         context = super(InfoBlog, self).get_context_data(**kwargs)
-        # Add in a QuerySet of all the books
-        context['informacion'] = EntradaBlog.objects.get(pk = self.kwargs.get('pk',None))
-        return context """
+        context['info'] = EntradaBlog.objects.get(pk = self.kwargs.get('pk',None))
+        return context
 
 
   

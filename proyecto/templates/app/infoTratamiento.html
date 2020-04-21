@@ -1,26 +1,23 @@
-{% extends 'app/index.html' %} {% load static %} {% load bootstrap4 %} {% block content%}
+{% extends 'app/index.html' %} {% load static %} {% load bootstrap4 %}
 
-<section class="dento-blog-area mt-50">
-    <div class="container  ">
-        <div class="row">
-            <div class="col-12 col-lg-8">
+{% block content%}
 
-                <!-- Single Blog Item -->
-                <div class="row no-gutters">
-                    <div class="col-md-6">
 
-                        <img src="../media/static/img/about.jpg" class="card-img" alt="...">
-                    </div>
-                    <div class="col-md-6">
-                        <div class="card-body">
-                            <h3 class="card-title">Titulo</h3>
-                            <p class="card-text">descripcion Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero aliquam amet, fugiat ullam earum neque praesentium. Nostrum iure delectus dolor perspiciatis ducimus consequuntur ipsa facilis eveniet ad, aspernatur
-                                recusandae! Adipisci. </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<section class="dento--blog-area mt-50">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-8 mb-100">
+          <!-- Blog Details Area -->
+          <div class="blog-details-area">
+            <img class="imgblog2" src="{{ trat.imagen.url }}" alt="">
+
+            <h2 class="post-title">{{ trat.nombre }}</h2>
+            <p>{{ trat.descripcion }}</p>
+            
+          </div>
         </div>
+      </div>
     </div>
-</section>
+  </section>
+
 {% endblock content%}
