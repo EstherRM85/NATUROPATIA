@@ -60,7 +60,7 @@
 
               <div class="blog-content ">
 
-                <a href="# " class="post-title ">{{ p.titulo }}</a>
+                <a href="{% url 'app:infoblog' p.id %}" class="post-title ">{{ p.titulo }}</a>
                 <span class="post-date ">{{ p.fecha }}</span>
 
               </div>
