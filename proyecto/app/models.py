@@ -44,9 +44,13 @@ class EntradaBlog(models.Model):
     descripcion = models.TextField(null=True)
     fecha = models.DateTimeField()
     imagen = models.ImageField(upload_to='static/img')
+    destacados = models.BooleanField(default=False)
+
 
     def __str__(self):         
         return self.titulo
+
+    
 
 class Video(models.Model):
     name= models.CharField(max_length=500)

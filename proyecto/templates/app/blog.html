@@ -10,13 +10,13 @@
         <div class="row no-gutters">
           <div class="col-md-6">
             <img src="{{ p.imagen.url }}" class="card-img" alt="...">
-            
+
           </div>
           <div class="col-md-6">
             <div class="card-body">
-            <h5><a class="nav-link card-title mt-4" href="{% url 'app:infoblog' p.id %}">{{ p.titulo }}</a></h5>
+              <h5><a class="nav-link card-title mt-4" href="{% url 'app:infoblog' p.id %}">{{ p.titulo }}</a></h5>
               <!--<h5><a class="card-title">{{ p.titulo }}</h5></a>-->
-              <p class="card-text">{{ p.descripcion }}</p>
+              <p class="card-text">{{ p.descripcion|truncatechars:148 }}</p>
               <p class="card-text"><small class="text-muted">{{ p.fecha }}</small></p>
             </div>
           </div>
@@ -41,53 +41,42 @@
 
       <!-- Dento Sidebar Area -->
       <div class="col-8 col-lg-4 float-right ">
+
         <div class="dento-sidebar ">
 
           <!-- Single Widget Area -->
           <div class="single-widget-area news-widget  ">
-            <h5 class="widget-title  ">LOS MÁS DESTACADOS</h5>
+            <h5 class="widget-title ">LOS MÁS DESTACADOS</h5>
 
             <!-- Single News Area -->
-            <div class="single-news-area d-flex align-items-center ">
-              <div class="blog-thumbnail ">
-                <img src="./img/bg-img/21.jpg " alt=" ">
-              </div>
-              <div class="blog-content ">
-                <a href="# " class="post-title ">Texto de ejemplo</a>
-                <span class="post-date ">28 Sep 2018</span>
-              </div>
-            </div>
 
-            <!-- Single News Area -->
-            <div class="single-news-area d-flex align-items-center ">
-              <div class="blog-thumbnail ">
-                <img src="./img/bg-img/22.jpg " alt=" ">
-              </div>
-              <div class="blog-content ">
-                <a href="# " class="post-title ">Texto de ejemplo</a>
-                <span class="post-date ">28 Sep 2018</span>
-              </div>
-            </div>
 
-            <!-- Single News Area -->
-            <div class="single-news-area d-flex align-items-center ">
+            {% for p in blog %}
+            <div class="single-news-area d-flex align-items-center">
+              {% if p.destacados == True %}
               <div class="blog-thumbnail ">
-                <img src="./img/bg-img/23.jpg " alt=" ">
+                <img class="imgdesta" src="{{ p.imagen.url }}" alt=" ">
               </div>
+
               <div class="blog-content ">
-                <a href="# " class="post-title ">Texto de ejemplo</a>
-                <span class="post-date ">28 Sep 2018</span>
+
+                <a href="# " class="post-title ">{{ p.titulo }}</a>
+                <span class="post-date ">{{ p.fecha }}</span>
+
               </div>
+              {% endif%}
             </div>
+            {% endfor %}
           </div>
 
         </div>
+
+
       </div>
     </div>
   </div>
 </section>
 
 <!-- *****Blog Area End ***** -->
-
 
 {% endblock content%}
