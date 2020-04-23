@@ -42,6 +42,11 @@ class Blog(ListView):
     context_object_name= 'blog' 
     queryset = EntradaBlog.objects.all()
 
+    def get_context_data(self,**kwargs):
+        context=super(Blog, self).get_context_data(**kwargs)
+        context['destacados']= EntradaBlog.objects.filter(destacados = True)[:4]
+        return context       
+
 
 class InfoBlog(DetailView):
     template_name = 'app/infoBlog.html'
