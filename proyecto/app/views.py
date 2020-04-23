@@ -38,6 +38,7 @@ class Infotratamiento(DetailView):
 class Blog(ListView):
     model =  EntradaBlog
     template_name = 'app/blog.html'
+    paginate_by = 4
     context_object_name= 'blog' 
     queryset = EntradaBlog.objects.all()
 

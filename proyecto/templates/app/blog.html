@@ -8,7 +8,7 @@
         {% for p in blog %}
         <!-- Single Blog Item -->
         <div class="row no-gutters">
-          <div class="col-md-6">
+          <div class="col-md-6 mt-4">
             <img src="{{ p.imagen.url }}" class="card-img" alt="...">
 
           </div>
@@ -24,15 +24,19 @@
         {% endfor %}
 
 
-
-
-
-
         <!-- Pagination -->
         <nav class="dento-pagination mb-100">
           <ul class="pagination">
-            <li class="page-item active"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item active">
+              {% if page_obj.has_previous %}
+              <a class="page-link" href="?page={{page_obj.previous_page_number}}">1</a>
+              {% endif %}
+            </li>
+            <li class="page-item">
+              {% if page_obj.has_next %}
+              <a class="page-link" href="?page={{page_obj.next_page_number}}">2</a>
+              {% endif %}
+            </li>
             <li class="page-item"><a class="page-link" href="#"><i class="fa fa-angle-right"></i></a></li>
           </ul>
         </nav>
@@ -45,7 +49,7 @@
         <div class="dento-sidebar ">
 
           <!-- Single Widget Area -->
-          <div class="single-widget-area news-widget  ">
+          <div class="single-widget-area news-widget mt-4">
             <h5 class="widget-title ">LOS MÁS DESTACADOS</h5>
 
             <!-- Single News Area -->
@@ -54,13 +58,14 @@
             {% for p in blog %}
             <div class="single-news-area d-flex align-items-center">
               {% if p.destacados == True %}
-              <div class="blog-thumbnail ">
+              <div class="blog-thumbnail mb-3">
                 <img class="imgdesta" src="{{ p.imagen.url }}" alt=" ">
               </div>
 
               <div class="blog-content ">
 
                 <a href="{% url 'app:infoblog' p.id %}" class="post-title ">{{ p.titulo }}</a>
+                
                 <span class="post-date ">{{ p.fecha }}</span>
 
               </div>
