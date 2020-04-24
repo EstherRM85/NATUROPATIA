@@ -50,27 +50,20 @@
 
           <!-- Single Widget Area -->
           <div class="single-widget-area news-widget mt-4">
-          
             <h5 class="widget-title ">LOS MÁS DESTACADOS</h5>
 
             <!-- Single News Area -->
-
-
             {% for p in destacados %}
-            <div class="single-news-area d-flex align-items-center">
-              
-              <div class="blog-thumbnail mb-3">
+            <div class="single-news-area d-flex align-items-center row">
+              <div class="col-8 mb-3">
                 <img class="imgdesta" src="{{ p.imagen.url }}" alt=" ">
               </div>
 
-              <div class="blog-content ">
-
+              <div class="col-4">
                 <a href="{% url 'app:infoblog' p.id %}" class="post-title ">{{ p.titulo }}</a>
                 
                 <span class="post-date ">{{ p.fecha }}</span>
-
               </div>
-              
             </div>
             {% endfor %}
           </div>
