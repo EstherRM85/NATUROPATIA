@@ -1,20 +1,20 @@
-{% load static %} {% load bootstrap4 %}
+{% load static %} {% load bootstrap4 %} {% load static i18n %}
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>Natural Holistic</title>
+  <title>Natural Holistic</title>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Hojas de estilo -->
-    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <script src="https://kit.fontawesome.com/94d365e8cc.js" crossorigin="anonymous"></script>
+  <!-- Hojas de estilo -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/94d365e8cc.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -37,32 +37,43 @@
       <ul class="nav navbar-nav ml-auto">
 
         <li class="nav-item">
-          <a class="nav-link" href="#">SOBRE MÍ</a>
+          <a class="nav-link" href="#">{% trans 'SOBRE MÍ' %}</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'app:Tratamientos' %}">TRATAMIENTOS</a>
+          <a class="nav-link" href="{% url 'app:Tratamientos' %}">{% trans 'TRATAMIENTOS' %}</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#">PATOLOGÍAS</a>
+          <a class="nav-link" href="#">{% trans 'PATOLOGÍAS'  %}</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'app:blog' %}">BLOG</a>
+          <a class="nav-link" href="{% url 'app:blog' %}">{% trans 'BLOG' %}</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#">TESTIMONIOS</a>
+          <a class="nav-link" href="#">{% trans 'TESTIMONIOS' %}</a>
         </li>
 
+        <li>
+          {% language 'es' %}
+          <a href="{% url 'app:index' %}"> Español </a>
+          {% endlanguage %}
+        </li>
+
+        <li>
+          {% language 'en' %}
+          <a href="{% url 'app:index' %}"> English </a>
+          {% endlanguage %}
+        </li>
       </ul>
     </div>
   </nav>
 
-    {% block content%}
+  {% block content%}
 
-<div id="demo" class="carousel slide" data-ride="carousel">
+  <div id="demo" class="carousel slide" data-ride="carousel">
 
     <!-- Indicators -->
     <ul class="carousel-indicators">
@@ -94,63 +105,64 @@
   </div>
 
 
-    {% comment %} <div class=".container-fluid responsiveContent">
-        <iframe src=' {{ MEDIA_URL }}{{ videofile }} ' type='video/mp4 ' width="560" allowfullscreen="" frameborder="50|7000"></iframe>
-    </div>
-    <br><br>
+  {% comment %} <div class=".container-fluid responsiveContent">
+    <iframe src=' {{ MEDIA_URL }}{{ videofile }} ' type='video/mp4 ' width="560" allowfullscreen=""
+      frameborder="50|7000"></iframe>
+  </div>
+  <br><br>
 
-    <script>
-        'undefined ' === typeof _trfq || (window._trfq = []);
-        'undefined ' === typeof _trfd && (window._trfd = []), _trfd.push({
-            'tccl.baseHost ': 'secureserver.net '
-        }), _trfd.push({
-            'ap ': 'cpsh '
-        }, {
-            'server ': 'p3plcpnl0769 '
-        })
+  <script>
+    'undefined ' === typeof _trfq || (window._trfq = []);
+    'undefined ' === typeof _trfd && (window._trfd = []), _trfd.push({
+      'tccl.baseHost ': 'secureserver.net '
+    }), _trfd.push({
+      'ap ': 'cpsh '
+    }, {
+      'server ': 'p3plcpnl0769 '
+    })
 
 
         // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.
-    </script> {% endcomment %}
+  </script> {% endcomment %}
 
-    {% for p in mi %}
-        
-            
-      <div class="container-fluid contenedor">
-            <img class="imagenCentro float-left mr-5" src="{{ p.imagenCentro.url }}">
-            <h5 class="titulo_centro" href="{% url 'app:sobremi' %}">{{ p.tituloCentro }}</h5><br>
-            <h5 class="texto_centro" href="{% url 'app:sobremi' %}">{{ p.textoCentro }}</h5>
-      </div>
-      <div class="row container-fluid perfil d-flex align-items-center">
-            <div class="col-sm-8">
-              <h5 class="tituloPerfil" href="{% url 'app:sobremi' %} ">{{ p.tituloPerfil }}</h5>
-              <h5 class="texto_perfil float-left mr-5" href="{% url 'app:sobremi' %} "></br>{{ p.textoPerfil }}</h5>
-            </div>
-            <img class="col-sm-2 imagenPerfil rounded-circle" src="{{ p.imagenPerfil.url }}">
-      </div>
-  
-      <div class="container-fluid  footer mr-5 iconos">
-   
-          <h6 class="text-uppercase font-weight-bold mr-5">Contacto</h6>
-            <p class="iconos">
-            <i class="fas fa-home mr-5"></i>{{ p.direccion }}</p>
-            <p class="iconos">
-            <i class="fas fa-envelope mr-5"></i>{{ p.mail }}</p>
-            <p class="iconos">
-            <i class="fas fa-phone mr-5"></i>{{ p.tel }}</p>
-        </div>
-     
-    
+  {% for p in mi %}
 
- 
-    {% endfor %}
 
-    <script src='https://img1.wsimg.com/tcc/tcc_l.combined.1.0.6.min.js '></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js "></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js "></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js "></script>
+  <div class="container-fluid contenedor">
+    <img class="imagenCentro float-left mr-5" src="{{ p.imagenCentro.url }}">
+    <h5 class="titulo_centro" href="{% url 'app:sobremi' %}">{{ p.tituloCentro }}</h5><br>
+    <h5 class="texto_centro" href="{% url 'app:sobremi' %}">{{ p.textoCentro }}</h5>
+  </div>
+  <div class="row container-fluid perfil d-flex align-items-center">
+    <div class="col-sm-8">
+      <h5 class="tituloPerfil" href="{% url 'app:sobremi' %} ">{{ p.tituloPerfil }}</h5>
+      <h5 class="texto_perfil float-left mr-5" href="{% url 'app:sobremi' %} "></br>{{ p.textoPerfil }}</h5>
+    </div>
+    <img class="col-sm-2 imagenPerfil rounded-circle" src="{{ p.imagenPerfil.url }}">
+  </div>
 
-    {% endblock content%}
+  <div class="container-fluid  footer mr-5 iconos">
+
+    <h6 class="text-uppercase font-weight-bold mr-5">Contacto</h6>
+    <p class="iconos">
+      <i class="fas fa-home mr-5"></i>{{ p.direccion }}</p>
+    <p class="iconos">
+      <i class="fas fa-envelope mr-5"></i>{{ p.mail }}</p>
+    <p class="iconos">
+      <i class="fas fa-phone mr-5"></i>{{ p.tel }}</p>
+  </div>
+
+
+
+
+  {% endfor %}
+
+  <script src='https://img1.wsimg.com/tcc/tcc_l.combined.1.0.6.min.js '></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js "></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js "></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js "></script>
+
+  {% endblock content%}
 </body>
 
 </html>
