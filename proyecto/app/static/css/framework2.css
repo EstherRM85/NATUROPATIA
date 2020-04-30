@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+html{overflow-y:scroll; overflow-x:hidden;}
+html, body{margin:0; padding:0; font-size:14px; line-height:1.6em;}
+
+*, *::before, *::after{box-sizing:border-box;}
+
+.overlay{position:relative; z-index:1;}
+.overlay::after{display:block; position:absolute; top:0; left:0; width:100%; height:100%; content:""; z-index:-1;}
+
+
+
+blockquote{display:block; position:relative; width:100%; margin:0; padding:30px; line-height:1.4; z-index:1;}
+blockquote::before{display:block; position:absolute; top:0; left:0; font-family:"Font Awesome 5 Free"; font-weight:900; font-size:60px; line-height:60px; content:"\f10d"; z-index:-1;}
+
+.clear{display:block;}
+.clear::before, .clear::after{display:table; content:"";}
+.clear, .clear::after{clear:both;}
+
+img{width:auto; max-width:100%; height:auto; margin:0; padding:0; border:none; line-height:normal; vertical-align:middle;}
+
+
+
+/* Fonts
+--------------------------------------------------------------------------------------------------------------- */
+body{font-family:Verdana, Geneva, sans-serif;}
+h6, .heading{font-family:Georgia, "Times New Roman", Times, serif;}
+
+
+/* Generalise
+--------------------------------------------------------------------------------------------------------------- */
+h6, .heading{margin:0 0 20px 0; font-size:1.4rem; line-height:normal; font-weight:normal; text-transform:capitalize;}
+.heading.nospace{margin-bottom:0;}
+
+
+
+.font-xs{font-size:.8rem;}
+.font-x2{font-size:1.8rem; line-height:normal;}
+
+
+.hoc{display:block; margin:0 auto;}
+
+.one_half{display:inline-block; float:left; margin:0 0 0 4.21052%; list-style:none;}
+
+.first{margin-left:0; clear:left;}
+.one_half{width:47.89473%;}
+
+
+

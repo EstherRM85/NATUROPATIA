@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+
+html{overflow-y:scroll;}
+html, body{margin:0; padding:0; font-size:14px; line-height:1.6em;}
+
+*, *::before, *::after{box-sizing:border-box;}
+
+a{outline:none; text-decoration:none;}
+
+
+img{width:auto; max-width:100%; height:auto; margin:0; padding:0; border:none; line-height:normal; vertical-align:middle;}
+.imgover{display:inline-block; position:relative; max-width:100%;}
+.imgover::before, .imgover::after{display:block; position:absolute; content:""; text-align:center; opacity:0;}
+.imgover::before{top:0; right:0; bottom:0; left:0;}
+.imgover:hover::before, .imgover:hover::after{opacity:1;}
+
+
+/* Fonts
+--------------------------------------------------------------------------------------------------------------- */
+p{font-family:Verdana, Geneva, sans-serif;}
+h6, .heading{font-family:Georgia, "Times New Roman", Times, serif;}
+
+
+/* Generalise
+--------------------------------------------------------------------------------------------------------------- */
+ h6, .heading{margin:0 0 20px 0; font-size:22px; line-height:normal; font-weight:normal; text-transform:uppercase;}
+.heading.nospace{margin:0;}
+
+
+.wrapper{display:block; width:100%; margin:0; padding:0; text-align:left; word-wrap:break-word;}
+/*
+The "hoc" class is a generic class used to centre a containing element horizontally
+It should be used in conjunction with a second class or ID
+*/
+.hoc{display:block; margin:0 auto;}
+
+
+/* Grid
+--------------------------------------------------------------------------------------------------------------- */
+.one_half{display:inline-block; float:left; margin:0 0 0 3.06748466257669%; list-style:none;}
+.first{margin-left:0; clear:left;}
+.one_half{width:48.46625766871166%;}
+

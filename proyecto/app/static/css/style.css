@@ -1,12 +1,17 @@
+@charset "utf-8";
+
+@import url("framework.css");
+@import url("framework2.css");
+
 * {
     margin: 0;
     padding: 0;
 }
+
 .titulo_logo {
     color: #16a374;
     text-shadow: #4EBE7B 0.1em 0.1em 0.2em;
-    font-style: italic;
-    
+    font-style: italic;    
 }
 
 .nav-link {
@@ -95,3 +100,92 @@ img{
     height: auto;
     max-width: 100%;
 }
+
+.bandera{
+    width: 40px;
+    height: 20px;
+}
+
+/*--------------------------------------------------------*/
+
+/* Content Area*/
+
+
+.container{padding:80px 0;}
+
+.sectiontitle{display:block; max-width:55%; margin:0 auto 80px; text-align:center;}
+.sectiontitle *{margin:0;}
+
+
+
+/* Transition Fade
+This gives a smooth transition to "ALL" elements used in the layout - other than the navigation form used in mobile devices
+If you don't want it to fade all elements, you have to list the ones you want to be faded individually
+Delete it completely to stop fading
+--------------------------------------------------------------------------------------------------------------- */
+*, *::before, *::after{transition:all .2s ease-in-out;}
+
+/* Colours
+--------------------------------------------------------------------------------------------------------------- */
+
+.imgover:hover::before{background:rgba(0,0,0,.55);}
+.imgover, .imgover:hover::after{color:#FFFFFF;}
+
+
+/* Rows */
+
+.row3{color:#7A7A7A; background-color:#FFFFFF;}
+
+.row3 .heading{color:#121212;}
+
+
+@media screen and (min-width:978px){
+	.hoc{max-width:978px;}
+}
+
+/*--------------------ESTILO SOBRE MÍ---------------------------------------------------*/
+
+.container{padding:80px 0;}
+
+/* Content */
+
+.bgded{
+    background-image: url( '/static/img/imgHol.jpg' );
+}
+
+.sectiontitle{display:block; max-width:55%; margin:0 auto 80px; text-align:center;}
+.sectiontitle *{margin:0;}
+
+
+/* Testimonials */
+#testimonials{}
+#testimonials article{text-align:center;}
+#testimonials article *{margin:0; padding:0;}
+#testimonials article figure{display:inline-block; margin-bottom:20px;}
+#testimonials article figure img{float:left; margin-right:15px; border-radius:50%;}
+#testimonials article figure figcaption{float:left; margin-top:30px; font-size:1.4rem; text-align:left;}
+#testimonials article figure figcaption .heading{font-size:1.4rem;}
+#testimonials article figure figcaption em{display:block; margin-top:-5px; font-size:.8rem; font-style:normal;}
+#testimonials article blockquote{margin-bottom:20px; padding:20px; border-radius:25px 0;}
+#testimonials article blockquote::before{top:15px; left:15px; font-size:30px; line-height:30px;}
+
+
+
+*, *::before, *::after{transition:all .3s ease-in-out;}
+
+
+/* Colours
+--------------------------------------------------------------------------------------------------------------- */
+
+
+.overlay{color:#FFFFFF; background-color:inherit;}
+.overlay::after{color:inherit; background-color:rgba(0,0,0,.55);}
+.overlay.light{color:#474747;}
+.overlay.light::after{background-color:rgba(255,255,255,.7);}
+
+
+/* Content */
+
+
+#testimonials article blockquote{color:#474747; background-color:#FFFFFF;}
+#testimonials article blockquote::before{color:rgba(0,0,0,.05);}

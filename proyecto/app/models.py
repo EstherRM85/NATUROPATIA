@@ -16,6 +16,9 @@ class Info(models.Model):
     tel = models.IntegerField(null= True,blank=True)
     mail = models.EmailField(null= True,blank=True)
     horario = models.IntegerField(null= True,blank=True)
+
+    def __str__(self):         
+        return self.tituloPrincipal
     
     #redes
     
