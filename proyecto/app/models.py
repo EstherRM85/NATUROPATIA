@@ -12,15 +12,23 @@ class Info(models.Model):
     tituloPerfil = models.CharField(max_length=80, null=True)
     textoPerfil = models.TextField(null=True)
     imagenPerfil = models.ImageField(upload_to='static/img')
-    direccion = models.CharField(max_length=80, null=True)
-    tel = models.IntegerField(null= True,blank=True)
-    mail = models.EmailField(null= True,blank=True)
-    horario = models.IntegerField(null= True,blank=True)
+
 
     def __str__(self):         
         return self.tituloPrincipal
     
     #redes
+    
+class Contacto(models.Model):
+    nombreCentro =models.CharField(max_length=80, null=True)
+    direccion = models.CharField(max_length=80, null=True)
+    tel = models.IntegerField(null= True,blank=True)
+    mail = models.EmailField(null= True,blank=True)
+    horario = models.IntegerField(null= True,blank=True)
+    
+    def __str__(self):         
+        return self.nombreCentro
+    
     
 class Tratamiento(models.Model):
     nombre = models.CharField(max_length=80, null= True)
@@ -32,8 +40,8 @@ class Tratamiento(models.Model):
 
 
 class Patologia(models.Model):
-    nombre = models.CharField(max_length=80, null= True)
-    descripcion = models.TextField(null= True)
+    sistema = models.CharField(max_length=80, null= True)
+    patologia = models.CharField(max_length=80, null= True)
 
 
 class Testimonios(models.Model):

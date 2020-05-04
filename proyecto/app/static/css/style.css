@@ -1,8 +1,6 @@
 @charset "utf-8";
-
 @import url("framework.css");
 @import url("framework2.css");
-
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +9,7 @@
 .titulo_logo {
     color: #16a374;
     text-shadow: #4EBE7B 0.1em 0.1em 0.2em;
-    font-style: italic;    
+    font-style: italic;
 }
 
 .nav-link {
@@ -22,19 +20,19 @@
     font-style: italic;
 }
 
-.titulo-tra{
+.titulo-tra {
     margin-left: 0;
 }
 
-.navbar-default{
+.navbar-default {
     background-color: #e0f2f1;
 }
 
-.navbar-brand{
-    color:rgb(77, 184, 118);
+.navbar-brand {
+    color: rgb(77, 184, 118);
 }
 
-.navbar-brand:hover{
+.navbar-brand:hover {
     color: rgb(77, 184, 118);
 }
 
@@ -42,6 +40,7 @@
     width: 100%;
     height: 100%;
 }
+
 
 /* .responsiveContent {
     position: relative;
@@ -65,7 +64,7 @@
     margin-left: 6px;
     margin-top: 50px;
     color: #4EBE7B;
-    text-decoration:underline;
+    text-decoration: underline;
 }
 
 .texto_centro {
@@ -76,9 +75,9 @@
 .tituloPerfil {
     color: #4EBE7B;
     margin-left: 180px;
-    text-decoration:underline;
+    text-decoration: underline;
 }
- 
+
 .texto_perfil {
     color: gray;
 }
@@ -89,33 +88,43 @@
     /*width: 500px;**/
 }
 
-.iconos{
+.iconos {
     padding-top: 15px;
-    background-color:#4EBE7B ;
+    background-color: #4EBE7B;
     margin: 0 auto;
     padding-bottom: 10px;
 }
 
-img{
+img {
     height: auto;
     max-width: 100%;
 }
 
-.bandera{
+.bandera {
     width: 40px;
     height: 20px;
 }
 
+
 /*--------------------------------------------------------*/
+
 
 /* Content Area*/
 
+.container {
+    padding: 80px 0;
+}
 
-.container{padding:80px 0;}
+.sectiontitle {
+    display: block;
+    max-width: 55%;
+    margin: 0 auto 80px;
+    text-align: center;
+}
 
-.sectiontitle{display:block; max-width:55%; margin:0 auto 80px; text-align:center;}
-.sectiontitle *{margin:0;}
-
+.sectiontitle * {
+    margin: 0;
+}
 
 
 /* Transition Fade
@@ -123,69 +132,155 @@ This gives a smooth transition to "ALL" elements used in the layout - other than
 If you don't want it to fade all elements, you have to list the ones you want to be faded individually
 Delete it completely to stop fading
 --------------------------------------------------------------------------------------------------------------- */
-*, *::before, *::after{transition:all .2s ease-in-out;}
+
+*,
+*::before,
+*::after {
+    transition: all .2s ease-in-out;
+}
+
 
 /* Colours
 --------------------------------------------------------------------------------------------------------------- */
 
-.imgover:hover::before{background:rgba(0,0,0,.55);}
-.imgover, .imgover:hover::after{color:#FFFFFF;}
+.imgover:hover::before {
+    background: rgba(0, 0, 0, .55);
+}
+
+.imgover,
+.imgover:hover::after {
+    color: #FFFFFF;
+}
 
 
 /* Rows */
 
-.row3{color:#7A7A7A; background-color:#FFFFFF;}
-
-.row3 .heading{color:#121212;}
-
-
-@media screen and (min-width:978px){
-	.hoc{max-width:978px;}
+.row3 {
+    color: #7A7A7A;
+    background-color: #FFFFFF;
 }
+
+.row3 .heading {
+    color: #121212;
+}
+
+@media screen and (min-width:978px) {
+    .hoc {
+        max-width: 978px;
+    }
+}
+
 
 /*--------------------ESTILO SOBRE MÍ---------------------------------------------------*/
 
-.container{padding:80px 0;}
+.container {
+    padding: 80px 0;
+}
+
 
 /* Content */
 
-.bgded{
-    background-image: url( '/static/img/imgHol.jpg' );
+.sectiontitle {
+    display: block;
+    max-width: 55%;
+    margin: 0 auto 80px;
+    text-align: center;
 }
 
-.sectiontitle{display:block; max-width:55%; margin:0 auto 80px; text-align:center;}
-.sectiontitle *{margin:0;}
+.sectiontitle * {
+    margin: 0;
+}
 
 
 /* Testimonials */
-#testimonials{}
-#testimonials article{text-align:center;}
-#testimonials article *{margin:0; padding:0;}
-#testimonials article figure{display:inline-block; margin-bottom:20px;}
-#testimonials article figure img{float:left; margin-right:15px; border-radius:50%;}
-#testimonials article figure figcaption{float:left; margin-top:30px; font-size:1.4rem; text-align:left;}
-#testimonials article figure figcaption .heading{font-size:1.4rem;}
-#testimonials article figure figcaption em{display:block; margin-top:-5px; font-size:.8rem; font-style:normal;}
-#testimonials article blockquote{margin-bottom:20px; padding:20px; border-radius:25px 0;}
-#testimonials article blockquote::before{top:15px; left:15px; font-size:30px; line-height:30px;}
 
+#testimonials article {
+    text-align: center;
+}
 
+#testimonials article * {
+    margin: 0;
+    padding: 0;
+}
 
-*, *::before, *::after{transition:all .3s ease-in-out;}
+#testimonials article figure {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+#testimonials article figure img {
+    float: left;
+    margin-right: 15px;
+    border-radius: 50%;
+}
+
+#testimonials article figure figcaption {
+    float: left;
+    margin-top: 30px;
+    font-size: 1.4rem;
+    text-align: left;
+}
+
+#testimonials article figure figcaption .heading {
+    font-size: 1.4rem;
+}
+
+#testimonials article figure figcaption em {
+    display: block;
+    margin-top: -5px;
+    font-size: .8rem;
+    font-style: normal;
+}
+
+#testimonials article blockquote {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 25px 0;
+}
+
+#testimonials article blockquote::before {
+    top: 15px;
+    left: 15px;
+    font-size: 30px;
+    line-height: 30px;
+}
+
+*,
+*::before,
+*::after {
+    transition: all .3s ease-in-out;
+}
 
 
 /* Colours
 --------------------------------------------------------------------------------------------------------------- */
 
+.overlay {
+    color: #FFFFFF;
+    background-color: inherit;
+}
 
-.overlay{color:#FFFFFF; background-color:inherit;}
-.overlay::after{color:inherit; background-color:rgba(0,0,0,.55);}
-.overlay.light{color:#474747;}
-.overlay.light::after{background-color:rgba(255,255,255,.7);}
+.overlay::after {
+    color: inherit;
+    background-color: rgba(0, 0, 0, .55);
+}
+
+.overlay.light {
+    color: #474747;
+}
+
+.overlay.light::after {
+    background-color: rgba(255, 255, 255, .7);
+}
 
 
 /* Content */
 
+#testimonials article blockquote {
+    color: #474747;
+    background-color: #FFFFFF;
+}
 
-#testimonials article blockquote{color:#474747; background-color:#FFFFFF;}
-#testimonials article blockquote::before{color:rgba(0,0,0,.05);}
+#testimonials article blockquote::before {
+    color: rgba(0, 0, 0, .05);
+}
