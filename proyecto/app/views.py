@@ -27,7 +27,7 @@ class Tratamientos(ListView):
     queryset = Tratamiento.objects.all()
     
     def get_context_data(self,**kwargs):
-        context=super(Tratamiento, self).get_context_data(**kwargs)
+        context=super(Tratamientos, self).get_context_data(**kwargs)
         context['contacto']= Contacto.objects.all()
         return context
 

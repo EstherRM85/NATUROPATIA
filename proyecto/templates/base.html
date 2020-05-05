@@ -1,0 +1,94 @@
+{% load static %} {% load bootstrap4 %} {% load static i18n %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Natural Holistic</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Hojas de estilo -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/94d365e8cc.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-xl navbar-default">
+
+        <a class="navbar-brand d-flex align-items-center" href="{% url 'app:index' %}">
+            <img class="float-left" src="{% static 'img/unnamed.png' %}" alt="logo" style="width:110px;">
+            <h2 class="titulo_logo ml-3">Medicina<br>Alternativa</h2>
+        </a>
+
+        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon">
+        <i class="fas fa-bars" style="color:rgb(77, 184, 118); font-size:28px;">
+        </i></span>
+    </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarNav">
+            <ul class="nav navbar-nav">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">{% trans 'SOBRE MÍ' %}</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'app:Tratamientos' %}">{% trans 'TRATAMIENTOS' %}</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">{% trans 'PATOLOGÍAS'  %}</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'app:blog' %}">{% trans 'BLOG' %}</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">{% trans 'TESTIMONIOS' %}</a>
+                </li>
+
+                <li class="bandera">
+                    {% language 'es' %}
+                    <a href="{% url 'app:index' %}"><img src="{% static 'img/banderaES.jpg' %}"></a>
+                    {% endlanguage %}
+                </li>
+
+                <li class="bandera ml-2">
+                    {% language 'en' %}
+                    <a href="{% url 'app:index' %}"><img src="{% static 'img/banderaEN.jpg' %}"></a>
+                    {% endlanguage %}
+                </li>
+            </ul>
+        </div>
+    </nav>
+    {% block content%} {% endblock content %}
+    <footer>
+
+        <div class="container-fluid  footer mr-5 iconos">
+            {% for p in contacto %}
+            <h6 class="text-uppercase font-weight-bold mr-5">Contacto</h6>
+            <p class="iconos">
+                <i class="fas fa-home mr-5"></i>{{ p.direccion }}</p>
+            <p class="iconos">
+                <i class="fas fa-envelope mr-5"></i>{{ p.mail }}</p>
+            <p class="iconos">
+                <i class="fas fa-phone mr-5"></i>{{ p.tel }}</p>
+            {% endfor %}
+        </div>
+    </footer>
+
+
+    <script src='https://img1.wsimg.com/tcc/tcc_l.combined.1.0.6.min.js '></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js "></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrami.min.js "></script>
+</body>
+
+</html>

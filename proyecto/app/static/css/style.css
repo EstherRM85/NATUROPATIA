@@ -72,8 +72,9 @@
     position: relative;
 }
 
-.tituloPerfil {
-    color: #4EBE7B;
+.tituloPerfil,
+.heading {
+    color: #4EBE7B 0.1em 0.1em 0.2em;
     margin-left: 180px;
     text-decoration: underline;
 }
@@ -90,9 +91,13 @@
 
 .iconos {
     padding-top: 15px;
-    background-color: #4EBE7B;
+    background-color: #e0f2f1;
     margin: 0 auto;
     padding-bottom: 10px;
+}
+
+.fas {
+    color: #4EBE7B;
 }
 
 img {
@@ -252,33 +257,11 @@ Delete it completely to stop fading
 }
 
 
-/* Colours
---------------------------------------------------------------------------------------------------------------- */
-
-.overlay {
-    color: #FFFFFF;
-    background-color: inherit;
-}
-
-.overlay::after {
-    color: inherit;
-    background-color: rgba(0, 0, 0, .55);
-}
-
-.overlay.light {
-    color: #474747;
-}
-
-.overlay.light::after {
-    background-color: rgba(255, 255, 255, .7);
-}
-
-
 /* Content */
 
 #testimonials article blockquote {
     color: #474747;
-    background-color: #FFFFFF;
+    background-color: #e0f2f1;
 }
 
 #testimonials article blockquote::before {
