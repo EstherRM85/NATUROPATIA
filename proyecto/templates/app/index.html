@@ -1,15 +1,15 @@
  {% extends 'base.html' %}{% load static %} {% load bootstrap4 %} {% load static i18n %} {% block content%}
 
-<div id="demo" class="carousel slide" data-ride="carousel">
+<!-- <div id="demo" class="carousel slide" data-ride="carousel">
 
-    <!-- Indicators -->
+   Indicators 
     <ul class="carousel-indicators">
         <li data-target="#demo" data-slide-to="0" class="active"></li>
         <li data-target="#demo" data-slide-to="1"></li>
         <li data-target="#demo" data-slide-to="2"></li>
     </ul>
 
-    <!-- The slideshow -->
+    The slideshow 
     <div class="carousel-inner">
         <div class="carousel-item active">
             <img src="{% static 'img/imgHol.jpg' %}" alt="Los Angeles" width="1100" height="500">
@@ -22,35 +22,37 @@
         </div>
     </div>
 
-    <!-- Left and right controls -->
+ Left and right controls 
     <a class="carousel-control-prev" href="#demo" data-slide="prev">
         <span class="carousel-control-prev-icon"></span>
     </a>
     <a class="carousel-control-next" href="#demo" data-slide="next">
         <span class="carousel-control-next-icon"></span>
     </a>
-</div>
+</div> -->
 
 
-{% comment %}
-<div class=".container-fluid responsiveContent">
-    <iframe src=' {{ MEDIA_URL }}{{ videofile }} ' type='video/mp4 ' width="560" allowfullscreen="" frameborder="50|7000"></iframe>
-</div>
-<br><br>
+<!--Intro Section-->
+<section class="view intro-video">
+    <div class="col-lg-12 wow fadeIn">
+        <video class="video-fluid z-depth-1" autoplay loop controls muted>
+                <source class="embed-responsive-item" src=' {{ MEDIA_URL }}{{ videofile }} ' type='video/mp4 ' width="2000" allowfullscreen="" frameborder="50|7000"/>
+            </video>
 
-<script>
-    'undefined ' === typeof _trfq || (window._trfq = []);
-    'undefined ' === typeof _trfd && (window._trfd = []), _trfd.push({
-        'tccl.baseHost ': 'secureserver.net '
-    }), _trfd.push({
-        'ap ': 'cpsh '
-    }, {
-        'server ': 'p3plcpnl0769 '
-    })
+    </div>
 
+    <script>
+        'undefined ' === typeof _trfq || (window._trfq = []);
+        'undefined ' === typeof _trfd && (window._trfd = []), _trfd.push({
+            'tccl.baseHost ': 'secureserver.net '
+        }), _trfd.push({
+            'ap ': 'cpsh '
+        }, {
+            'server ': 'p3plcpnl0769 '
+        })
+    </script>
+</section>
 
-    // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.
-</script> {% endcomment %}
 <br><br>
 
 <div class="wrapper row3">
@@ -58,11 +60,11 @@
         <!-- main body -->
 
         <div class="sectiontitle">
-            <h6 class="heading font-x2">NUESTRO CENTRO</h6>
+            <h6 class="heading font-x2">{{ mi.tituloCentro }}</h6>
         </div>
         <article class="group">
-            <div class="one_half first">
-                <h6 class="heading">{{ mi.tituloCentro }}</h6>
+            <div class="one_half first mt-5">
+
                 <p>{{ mi.textoCentro }}</p>
             </div>
             <div class="one_half">
@@ -74,7 +76,7 @@
 </div>
 
 
-<div class="bgded overlay">
+<div class="bgded overlay mt-5">
     <section id="testimonials" class="hoc container-fluid clear">
         <div class="sectiontitle">
             <h6 class="heading font-x2">SOBRE MÍ</h6>
