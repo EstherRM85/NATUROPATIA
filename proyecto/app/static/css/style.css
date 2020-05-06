@@ -273,3 +273,8 @@ Delete it completely to stop fading
 #testimonials article blockquote::before {
     color: rgba(0, 0, 0, .05);
 }
+
+a#v-pills-home-tab.nav-link.active{
+    background-color: cadetblue;
+}
+

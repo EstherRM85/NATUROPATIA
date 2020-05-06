@@ -39,9 +39,12 @@ class Tratamiento(models.Model):
         return self.nombre
 
 
+class Sistema(models.Model):
+    nombre = models.CharField(max_length=80, null= True)
+
 class Patologia(models.Model):
-    sistema = models.CharField(max_length=80, null= True)
-    patologia = models.CharField(max_length=80, null= True)
+    nombre = models.CharField( max_length=80, null= True)
+    sistema= models.ForeignKey(Sistema, related_name="patologias",on_delete=models.CASCADE)
 
 
 class Testimonios(models.Model):
