@@ -3,6 +3,7 @@ from django.db import models
 
 # Create your models here.
 
+
 class Info(models.Model):
     tituloPrincipal = models.CharField(max_length=80, null=True)
     logo = models.ImageField(upload_to='static/img')
@@ -43,6 +44,9 @@ class Sistema(models.Model):
     nombresistema = models.CharField(max_length=80, null= True)
     def __str__(self):         
         return self.nombresistema
+    
+    class Meta:
+        ordering = ['nombresistema']
 
 class Patologia(models.Model):
     nombrepatologia = models.CharField( max_length=80, null= True)

@@ -16,8 +16,9 @@
     text-align: center;
     font-size: 20px;
     margin-left: 50px;
-    color: #4EBE7B;
     font-style: italic;
+    color: #16a374;
+    text-shadow: #4EBE7B 0.1em 0.1em 0.2em;
 }
 
 .titulo-tra {
@@ -274,7 +275,30 @@ Delete it completely to stop fading
     color: rgba(0, 0, 0, .05);
 }
 
-a#v-pills-home-tab.nav-link.active{
+a#v-pills-home-tab.nav-link.active {
     background-color: cadetblue;
 }
 
+
+/*PATOLOGIAS*/
+
+button.btn.btn-primary.dropdown-toggle {
+    background-color: #e0f2f1;
+    color: #4EBE7B;
+    border-color: #4EBE7B;
+    text-align: center;
+}
+
+h5.card-title {
+    color: #16a374;
+    font-style: italic;
+}
+
+.card-body.pato {
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    background: linear-gradient(#effcef, #ccedd2, #94d3ac, #2c7873);
+}
+
+.margenp {
+    margin: 250px;
+}
