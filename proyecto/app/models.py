@@ -10,7 +10,7 @@ class Info(models.Model):
     tituloCentro = models.CharField(max_length=80, null=True)
     textoCentro = models.TextField(null=True)
     imagenCentro = models.ImageField(upload_to='static/img')
-    tituloPerfil = models.CharField(max_length=80, null=True)
+    nombreDr = models.CharField(max_length=80, null=True)
     textoPerfil = models.TextField(null=True)
     imagenPerfil = models.ImageField(upload_to='static/img')
 

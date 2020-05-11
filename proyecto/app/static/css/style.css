@@ -297,8 +297,50 @@ h5.card-title {
 .card-body.pato {
     box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
     background: linear-gradient(#effcef, #ccedd2, #94d3ac, #2c7873);
+    display: inline-block;
+    margin: 0 0.05rem;
+    animation: bounce;
+    animation-duration: 2s;
 }
 
 .margenp {
     margin: 250px;
+}
+
+
+/*TRANSICION CAJITAS PATOLOGIAS*/
+
+div.cajita:hover {
+    width: 100px;
+    height: 100px;
+    transition-property: width;
+    transition-duration: 200s;
+    transition-timing-function: linear;
+    transition-delay: 200s;
+}
+
+div.cajita:hover {
+    width: 300px;
+    height: 300px;
+}
+
+div.card.w-50 {
+    transition: width 2s, height 4s;
+}
+
+.dropdown-menu.show {
+    background-color: #e0f2f1;
+}
+
+
+/*DA EFECTO A LAS FOTOS CUANDO PONES EL RATON*/
+
+img {
+    margin-bottom: -6px;
+    cursor: pointer
+}
+
+img:hover {
+    opacity: 0.6;
+    transition: 0.3s
 }
