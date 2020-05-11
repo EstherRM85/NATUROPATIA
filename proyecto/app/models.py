@@ -54,11 +54,17 @@ class Patologia(models.Model):
     def __str__(self):         
         return self.nombrepatologia
 
-class Testimonios(models.Model):
+class Testimonio(models.Model):
     nombre = models.CharField(max_length=70)
     edad = models.IntegerField(null=True)
     descripcion = models.TextField(null=True)
     fecha_publicacion = models.DateTimeField()
+
+    def __str__(self):         
+        return self.nombre
+
+
+    
 
 class EntradaBlog(models.Model):
     titulo = models.CharField(max_length=70)

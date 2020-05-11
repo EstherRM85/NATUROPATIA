@@ -82,12 +82,12 @@ class InfoBlog(DetailView):
 
 
 class Opiniones(ListView):
-    model = Testimonios
+    model = Testimonio
     template_name = 'app/testimonios.html'
    
     def get_context_data(self, **kwargs):
         context=super(Opiniones, self).get_context_data(**kwargs)
-        context['opi']= Testimonios.objects.all()
+        context['opi']= Testimonio.objects.all()
         context['contacto']= Contacto.objects.all()
         return context
     
