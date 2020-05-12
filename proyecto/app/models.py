@@ -59,6 +59,7 @@ class Testimonio(models.Model):
     edad = models.IntegerField(null=True)
     descripcion = models.TextField(null=True)
     fecha_publicacion = models.DateTimeField()
+    imagen = models.ImageField(upload_to = 'testimonios', default = 'testimonios/profile.png')
 
     def __str__(self):         
         return self.nombre
