@@ -6,9 +6,9 @@
             <div class="col-md-12 ">
                 <h5><a class="nav-link titulo-tra mt-4" href="{% url 'app:infotratamiento' p.id %}">{{ p.nombre }}</a></h5>
                 <div class="card-deck">
-                    <div class="card rounded-circle">
+                    <div class="embed-responsive embed-responsive-16by9">
 
-                        <img src="{{ p.imagen.url }}">
+                        <img alt="Card image cap" class="card-img-top embed-responsive-item" src="{{ p.imagen.url }}">
 
                     </div>
                 </div>
