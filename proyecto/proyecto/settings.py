@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'app',
     'bootstrap4',
+    'modeltranslation',
 ]
 
 MIDDLEWARE = [
@@ -115,6 +116,12 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
+
+
+LANGUAGES = (
+    ('es','Español'),
+    ('en','English'),
+)
 
 LANGUAGE_CODE = 'es'
 

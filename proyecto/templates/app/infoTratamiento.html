@@ -1,23 +1,21 @@
-{% extends 'app/index.html' %} {% load static %} {% load bootstrap4 %}
-
-{% block content%}
+{% extends 'app/index.html' %} {% load static %} {% load bootstrap4 %} {% block content%}
 
 
 <section class="dento--blog-area mt-50">
     <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-12 col-lg-8 mb-100">
-          <!-- Blog Details Area -->
-          <div class="blog-details-area">
-            <img class="imgblog2" src="{{ trat.imagen.url }}" alt="">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-8 mb-100">
+                <!-- Blog Details Area -->
+                <div class="blog-details-area">
+                    <img class="imgblog2" src="{{ trat.imagen.url }}" alt=""> {% autoescape off %}
 
-            <h2 class="post-title">{{ trat.nombre }}</h2>
-            <p>{{ trat.descripcion }}</p>
-            
-          </div>
+                    <h2 class="post-title">{{ trat.nombre }}</h2>
+                    <p>{{ trat.descripcion }}</p>
+                    {% endautoescape %}
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </section>
+</section>
 
 {% endblock content%}
