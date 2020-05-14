@@ -12,9 +12,10 @@
                     </div>
                     <div class="col-md-6">
                         <div class="card-body">
-                            <h5><a class="nav-link card-title mt-4" href="{% url 'app:infoblog' p.id %}">{{ p.titulo }}</a></h5>
+                            <h5 class="nav-link card-title mt-4" href="#">{{ p.titulo }}</h5>
                             <!--<h5><a class="card-title">{{ p.titulo }}</h5></a>-->
                             <p class="card-text">{{ p.descripcion|truncatechars:148 }}</p>
+                            <a href="{% url 'app:infoblog' p.id %}">Leer más</a>
                             <p class="card-text"><small class="text-muted">{{ p.fecha }}</small></p>
                         </div>
                     </div>

@@ -11,10 +11,11 @@ class Index(TemplateView):
 
     def get_context_data(self,**kwargs):
         context=super(Index, self).get_context_data(**kwargs)
-        context_object_name = 'videofile'
-        context['videofile']=Video.objects.all()
-        lastvideo= Video.objects.all()[0]
-        context['videofile']= lastvideo.videofile
+        listaVideos=Video.objects.all()
+        if (len(listaVideos)>0): #Si hay videos
+            lastvideo= Video.objects.all()[0]
+            context['videofile']= lastvideo.videofile
+            
         context['mi']= Info.objects.all()[0]
         context['contacto']= Contacto.objects.all()
         
