@@ -1,4 +1,4 @@
- {% extends 'base.html' %}{% load static %} {% load bootstrap4 %} {% load static i18n %} {% block content%}
+{% extends 'base.html' %}{% load static %} {% load bootstrap4 %} {% load static i18n %} {% block content%}
 
 <!-- <div id="demo" class="carousel slide" data-ride="carousel">
 
@@ -36,8 +36,9 @@
 <section class="view intro-video">
     <div class="col-lg-12 wow fadeIn">
         <video class="video-fluid z-depth-1" autoplay loop controls muted>
-                <source class="embed-responsive-item" src=' {{ MEDIA_URL }}{{ videofile }} ' type='video/mp4 ' width="2000" allowfullscreen="" frameborder="50|7000"/>
-            </video>
+            <source class="embed-responsive-item" src=' {{ MEDIA_URL }}{{ videofile }} ' type='video/mp4 ' width="2000"
+                allowfullscreen="" frameborder="50|7000" />
+        </video>
 
     </div>
 
@@ -55,29 +56,57 @@
 
 <br><br>
 
-<div class="wrapper row3">
-    <main class="hoc container-fluid clear">
-        <!-- main body -->
-        <div class="sectiontitle">
-            <h6 class="heading font-x2">NUESTRO CENTRO</h6>
+<div class="container-fluid">
+    <div class="sectiontitle">
+        <h6 class="heading font-x2">{{ mi.tituloCentro }}</h6>
+    </div>
+    <div class="row justify-content-center align-items-center">
+        <div class="col-sm-4">
+            <p>{{ mi.textoCentro }}</p>
         </div>
+        <div class="col-sm-4">
+            <a class="imgover" href="#"><img src="{{ mi.imagenCentro.url }}" alt=""></a>
+        </div>
+    </div>
 
-        <article class="group">
-            <div class="one_half first mt-1">
-                <h6 class="heading font-x2">{{ mi.tituloCentro }}</h6>
-                <p>{{ mi.textoCentro }}</p>
-            </div>
-            <div class="one_half">
-                <a class="imgover" href="#"><img src="{{ mi.imagenCentro.url }}" alt=""></a>
-            </div>
-        </article>
 
-    </main>
+</div>
+
+<div class="container-fluid mt-5">
+    <div class="row ">
+        <section id="testimonials" class="hoc container-fluid">
+            <div class="col-md-6">
+                <h6 class="heading font-x2 one_half mt-5 mb-3">SOBRE MÍ</h6>
+                <article class="one_half first">
+                    <figure class="clear"><img src="{{ mi.imagenPerfil.url }}" alt=""></figure>
+                </article>
+            </div>
+            <div class="col-md-12">
+                <h6 class="heading d-flex justify-content-center">{{ mi.nombreDr }}</h6>
+                <article class="one_half">
+                    <blockquote>{{ mi.textoPerfil }}</blockquote>
+                </article>
+            </div>
+        </section>
+    </div>
+    
 </div>
 
 
 
+
+
+
+
+
+
+
+
+
+
+<!-- 
 <div class="mb-3 bgded mt-5">
+
     <div class="row no-gutters">
         <section id="testimonials" class="hoc container-fluid clear">
             <div class="col-md-6">
@@ -94,7 +123,7 @@
             </div>
     </div>
     </section>
-</div>
+</div> -->
 {% endblock content%}
 
 
