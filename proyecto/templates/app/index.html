@@ -59,14 +59,18 @@
 
 <div class="container-fluid">
     <div class="sectiontitle">
-        <h6 class="heading font-x2">{{ mi.tituloCentro }}</h6>
+        <h6 class="heading font-x2">NUESTRO CENTRO</h6> 
+        
     </div>
+     
     <div class="row justify-content-center align-items-center">
+    
         <div class="col-sm-4">
-            <p>{{ mi.textoCentro }}</p>
+            <h6 class="heading font-x2">{{ mi.tituloCentro }}</h6>
+            <p class="text-justify">{{ mi.textoCentro }}</p>
         </div>
         <div class="col-sm-4">
-            <a class="imgover" href="#"><img src="{{ mi.imagenCentro.url }}" alt=""></a>
+            <img class="imgover" src="{{ mi.imagenCentro.url }}" alt="ImagenCentro">
         </div>
     </div>
 

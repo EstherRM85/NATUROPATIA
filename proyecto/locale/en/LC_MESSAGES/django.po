@@ -36,3 +36,7 @@ msgstr "BLOG"
 #: .\templates\app\index.html:56
 msgid "TESTIMONIOS"
 msgstr "TESTIMONIALS"
+
+#: .\templates\.\base.html:80
+msgid "Contacto"
+msgstr "Contact"

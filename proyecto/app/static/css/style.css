@@ -224,9 +224,23 @@ div.card.w-50 {
 
 /*BLOG*/
 
-h5.widget-title {
+.container.blog {
+    padding-bottom: 0;
+}
+
+h5.widget-title,
+.card-title {
     color: #16a374;
-    text-shadow: #4EBE7B 0.1em 0.1em 0.2em;
+    /* text-shadow: #4EBE7B 0.1em 0.1em 0.2em; */
+}
+
+.title {
+    color: #027c53;
+    font-size: 17px;
+}
+
+p.card-text {
+    font-size: unset;
 }
 
 
