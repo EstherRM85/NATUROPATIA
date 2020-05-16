@@ -5,6 +5,12 @@ from .models import *
 class TratamientoTranslationOptions(TranslationOptions):
     fields = ('nombre', 'descripcion')
 
+
+@register(Sistema)
+class SistemaTranslationOptions(TranslationOptions):
+    fields = ('nombresistema',)
+
+
 @register(EntradaBlog)
 class EntradaBlogTranslationOptions(TranslationOptions):
     fields = ('titulo', 'descripcion')
