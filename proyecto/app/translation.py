@@ -10,6 +10,11 @@ class TratamientoTranslationOptions(TranslationOptions):
 class SistemaTranslationOptions(TranslationOptions):
     fields = ('nombresistema',)
 
+@register(Patologia)
+class SistemaTranslationOptions(TranslationOptions):
+    fields = ('nombrepatologia',)
+
+
 
 @register(EntradaBlog)
 class EntradaBlogTranslationOptions(TranslationOptions):
