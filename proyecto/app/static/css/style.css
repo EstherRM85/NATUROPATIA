@@ -30,7 +30,6 @@ img:hover {
 
 /*IDIOMA*/
 
-
 .bandera {
     width: 40px;
     height: 20px;
@@ -60,9 +59,9 @@ img:hover {
     font-style: italic;
 }
 
-@media (max-width:400px){
-    .titulo_logo{
-       font-size: 1.2em;
+@media (max-width:400px) {
+    .titulo_logo {
+        font-size: 1.2em;
     }
 }
 
@@ -178,6 +177,7 @@ img:hover {
     color: #4EBE7B;
 }
 
+
 /*PATOLOGIAS*/
 
 button.btn.btn-primary.dropdown-toggle {
@@ -227,7 +227,7 @@ div.cajita:hover {
     height: 300px;
 }
 
-div.card.w-50 {
+div.card.w-60 {
     transition: width 2s, height 4s;
 }
 
@@ -276,6 +276,3 @@ p {
     font-style: italic;
     color: #7A7A7A;
 }
-
-
-

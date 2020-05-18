@@ -5,7 +5,7 @@
 
 
     <!-- Grid row -->
-    <div class="row-responsive">
+    <div>
 
         <!--Carousel Wrapper-->
         <div id="multi-item-example" class="carousel slide carousel-multi-item mb-5" data-ride="carousel">
@@ -30,15 +30,11 @@
             <div class="carousel-inner" role="listbox">
 
                 <!--First slide-->
-                {% for p in opi %}
-                {% cycle 'start' '' '' as slidestart silent %}
-                {% cycle '' '' 'end' as slideend silent %}
-                
-                {% if slidestart == 'start' %}
-                <div class="carousel-item {% if forloop.first %} active {% endif %}">     
+                {% for p in opi %} {% cycle 'start' '' '' as slidestart silent %} {% cycle '' '' 'end' as slideend silent %} {% if slidestart == 'start' %}
+                <div class="carousel-item {% if forloop.first %} active {% endif %}">
                     <div class="row justify-content-center">
-                {% endif %}
-                        
+                        {% endif %}
+
                         <div class="col-md-3 mr-3 ml-3 justify-content-center">
                             <div class="testimonial">
                                 <!--Avatar-->
@@ -54,12 +50,11 @@
 
                             </div>
                         </div>
-
-                {% if slideend == 'end' %}
+                        <!-- Comprueba cierre de slide-->
+                        {% if slideend == 'end' or forloop.last %}
                     </div>
                 </div>
-                {% endif %}
-                {% endfor %}
+                {% endif %} {% endfor %}
 
 
 

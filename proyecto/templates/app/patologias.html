@@ -6,14 +6,14 @@
         {% for p in Psis %}
 
         <div class="col-sm-4 d-flex justify-content-center mb-3 mt-5 cajita">
-            <div class="card w-50 ">
+            <div class="card w-60 responsive">
                 <div class="card-body pato text-center" class="animate__animated animate__bounce">
                     <h5 class="card-title"> {{ p.nombresistema }}</h5>
-                    <div class="dropdown">
+                    <div class="dropdown{{p.id}}">
 
                         <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Ver patologia<i class="fas fa-plus-square ml-2"></i> </button>
 
-                        <div class="dropdown-menu">
+                        <div class="dropdown-menu ">
                             {% for y in p.patologias.all %}
                             <span class="dropdown-item-text">{{ y.nombrepatologia }}</span> {% endfor %}
                         </div>
