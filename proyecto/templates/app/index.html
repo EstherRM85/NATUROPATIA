@@ -37,7 +37,7 @@
 <section class="view intro-video">
     <div class="col-lg-12 wow fadeIn">
         <video class="video-fluid z-depth-1" autoplay loop controls muted>
-            <source class="embed-responsive-item" src=' {{ MEDIA_URL }}{{ videofile }} ' type='video/mp4 ' width="2000"
+            <source class="embed-responsive-item" src=' {{ MEDIA_URL }}{{ videofile }} ' type='video/mp4 ' 
                 allowfullscreen="" frameborder="50|7000" />
         </video>
 
@@ -65,12 +65,12 @@
 
     <div class="row justify-content-center ">
 
-        <div class="col-sm-4">
+        <div class="col-sm-4 ">
             <h6 class="heading font-x2">{{ mi.tituloCentro }}</h6>
             <p class="text-justify">{{ mi.textoCentro }}</p>
         </div>
         <div class="col-sm-4">
-            <img class="imgover" src="{{ mi.imagenCentro.url }}" alt="ImagenCentro">
+            <img src="{{ mi.imagenCentro.url }}" alt="animado" id="animado">
         </div>
     </div>
 
@@ -78,24 +78,26 @@
 </div>
 
 <div class="container-fluid mt-5">
-    <div class="row ">
-        <section id="testimonials" class="hoc container-fluid">
-            <div class="col-md-6">
+    <section id="testimonials" class="hoc">
+        <div class="row justify-content-center justify-content-sm-center">
+            <div class="col-md-4">
                 <h6 class="heading font-x2 one_half mt-5 mb-3">SOBRE MÍ</h6>
                 <article class="one_half first">
-                    <figure class="clear"><img src="{{ mi.imagenPerfil.url }}" alt=""></figure>
+                    <figure class="clear"><img class="rounded-circle" src="{{ mi.imagenPerfil.url }}" alt=""></figure>
                 </article>
             </div>
-            <div class="col-md-12">
-                <h6 class="heading d-flex justify-content-center mt-5">{{ mi.nombreDr }}</h6>
+            <div class="col-md-6 ml-2">
+                <h6 class="heading textoSobremi">{{ mi.nombreDr }}</h6>
                 <article class="one_half">
                     <blockquote>{{ mi.textoPerfil }}</blockquote>
                 </article>
             </div>
-        </section>
-    </div>
-
+        </div>
+    </section>
 </div>
+
+
+
 
 
 

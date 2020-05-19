@@ -76,16 +76,19 @@
     {% block content%} {% endblock content %}
     <footer>
 
-        <div class="container-fluid text-center  footer mr-5  mt-5 iconos">
+        <div class="container-fluid d-flex justify-content-center footer mr-5  mt-5 iconos">
             {% for p in contacto %}
-            <h6 class="text-uppercase font-weight-bold mr-5">Contacto</h6>
-            <p class="iconos">
-                <i class="fas fa-home mr-5"></i>{{ p.direccion }}</p>
-            <p class="iconos">
-                <i class="fas fa-envelope mr-5"></i>{{ p.mail }}</p>
-            <p class="iconos">
-                <i class="fas fa-phone mr-5"></i>{{ p.tel }}</p>
+            <div>
+                <h6 class="text-uppercase font-weight-bold mr-5"> {{ p.nombreCentro }}</h6>
+                <p class="iconos">
+                    <i class="fas fa-home mr-5"></i>{{ p.direccion }}</p>
+                <p class="iconos">
+                    <i class="fas fa-envelope mr-5"></i>{{ p.mail }}</p>
+                <p class="iconos">
+                    <i class="fas fa-phone mr-5"></i>{{ p.tel }}</p>
+            </div>
             {% endfor %}
+
         </div>
     </footer>
 
@@ -94,7 +97,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/94d365e8cc.js" crossorigin="anonymous"></script>
     <script src='https://img1.wsimg.com/tcc/tcc_l.combined.1.0.6.min.js '></script>
-
+    <script src="{% static 'js/main.js' %}"></script>
 </body>
 
 </html>

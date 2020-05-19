@@ -5,11 +5,11 @@
     <div class="row mb-5">
         {% for p in Psis %}
 
-        <div class="col-sm-4 d-flex justify-content-center mb-3 mt-5 cajita">
-            <div class="card w-60 responsive">
-                <div class="card-body pato text-center" class="animate__animated animate__bounce">
+        <div class="col-sm-4 d-flex justify-content-center mb-3 mt-5">
+            <div class="card w-60 responsive cajita">
+                <div class="card-body pato text-center">
                     <h5 class="card-title"> {{ p.nombresistema }}</h5>
-                    <div class="dropdown{{p.id}}">
+                    <div class="dropdown">
 
                         <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Ver patologia<i class="fas fa-plus-square ml-2"></i> </button>
 
