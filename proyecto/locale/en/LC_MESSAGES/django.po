@@ -17,25 +17,71 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\templates\app\index.html:40
+#: #: .\templates\.\base.html:26
+msgid "Centro de Salud Integrada"
+msgstr "Integrated Health Center"
+
+#: #: .\templates\.\base.html:39
 msgid "INICIO"
 msgstr "HOME"
 
-#: .\templates\app\index.html:44
+#: .\templates\.\base.html:43
 msgid "TRATAMIENTOS"
 msgstr "TREATMENTS"
 
-#: .\templates\app\index.html:48
+#: #: .\templates\.\base.html:47
 msgid "PATOLOGÍAS"
 msgstr "PATOLOGIES"
 
-#: .\templates\app\index.html:52
+#: #: .\templates\.\base.html:51
 msgid "BLOG"
 msgstr "BLOG"
 
-#: .\templates\app\index.html:56
+#: #: .\templates\.\base.html:55
 msgid "TESTIMONIOS"
 msgstr "TESTIMONIALS"
+
+#: .\templates\app\index.html:62
+msgid "NUESTRO CENTRO"
+msgstr "OUR CENTER"
+
+#: .\templates\app\index.html:84
+msgid "SOBRE MÍ"
+msgstr "ABOUT ME"
+
+#: .\templates\.\base.html:80
+msgid "Contacto"
+msgstr "Contact"#: #: .\templates\.\base.html:26
+msgid "Centro de Salud Integrada"
+msgstr "Integrated Health Center"
+
+#: #: .\templates\.\base.html:39
+msgid "INICIO"
+msgstr "HOME"
+
+#: .\templates\.\base.html:43
+msgid "TRATAMIENTOS"
+msgstr "TREATMENTS"
+
+#: #: .\templates\.\base.html:47
+msgid "PATOLOGÍAS"
+msgstr "PATOLOGIES"
+
+#: #: .\templates\.\base.html:51
+msgid "BLOG"
+msgstr "BLOG"
+
+#: #: .\templates\.\base.html:55
+msgid "TESTIMONIOS"
+msgstr "TESTIMONIALS"
+
+#: .\templates\app\index.html:62
+msgid "NUESTRO CENTRO"
+msgstr "OUR CENTER"
+
+#: .\templates\app\index.html:84
+msgid "SOBRE MÍ"
+msgstr "ABOUT ME"
 
 #: .\templates\.\base.html:80
 msgid "Contacto"
