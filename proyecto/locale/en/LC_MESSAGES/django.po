@@ -26,6 +26,11 @@ msgid "SOBRE MÍ"
 msgstr "ABOUT ME"
 
 #: .\templates\base.html:38
+#: #: .\templates\.\base.html:26
+msgid "Centro de Salud Integrada"
+msgstr "Integrated Health Center"
+
+#: #: .\templates\.\base.html:39
 msgid "INICIO"
 msgstr "HOME"
 

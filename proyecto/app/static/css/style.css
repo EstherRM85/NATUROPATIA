@@ -25,6 +25,11 @@ img:hover {
     transition: 0.3s
 }
 
+.img-top {
+    width: 100%;
+    object-fit: cover;
+}
+
 
 /*IDIOMA*/
 
@@ -159,6 +164,7 @@ img:hover {
     margin-left: 50px;
 }
 
+
 .heading.textoSobremi {
     margin-top: 80px;
 }
@@ -172,11 +178,12 @@ img:hover {
 
 #testimonials article blockquote {
     margin-bottom: 20px;
-    padding: 20px;
+    padding: 22px;
     border-radius: 25px 0;
     color: #7A7A7A;
     background-color: #e0f2f1;
-    font-size: 15px;
+    font-size: 20px;
+
 }
 
 
