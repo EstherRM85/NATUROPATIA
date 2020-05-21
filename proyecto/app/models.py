@@ -46,7 +46,7 @@ class Sistema(models.Model):
         return self.nombresistema
     
     class Meta:
-        ordering = ['nombresistema']
+        ordering = ['nombresistema_es']
 
 class Patologia(models.Model):
     nombrepatologia = models.CharField( max_length=80, null= True)

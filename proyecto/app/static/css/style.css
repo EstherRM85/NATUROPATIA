@@ -225,6 +225,10 @@ h5.card-title {
     color: #7A7A7A;
 }
 
+.cajitas {
+    margin-bottom: 150px;
+}
+
 
 /*TRANSICION CAJITAS PATOLOGIAS*/
 
@@ -267,6 +271,20 @@ h5.widget-title,
 
 p.card-text {
     font-size: unset;
+}
+
+
+/*TESTIMONIOS*/
+
+.fondo {
+    background: linear-gradient(#effcef, #ccedd2, #94d3ac, #ccedd2);
+    ;
+}
+
+div.font-weight-normal {
+    font-size: 20px;
+    font-style: italic;
+    color: #7A7A7A;
 }
 
 

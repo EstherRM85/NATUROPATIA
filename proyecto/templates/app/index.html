@@ -59,21 +59,19 @@
 
 <div class="container-fluid">
     <div class="sectiontitle mb-5">
-        <h6 class="heading font-x2">NUESTRO CENTRO</h6>
-
+        <h6 class="heading font-x2 mr-5">{% trans 'NUESTRO CENTRO' %}</h6>
     </div>
 
     <div class="row justify-content-center ">
 
         <div class="col-sm-4 ">
-            <h6 class="heading font-x2">{{ mi.tituloCentro }}</h6>
-            <p class="text-justify">{{ mi.textoCentro }}</p>
+            <h6 class="heading font-x3 mr-5">{{ mi.tituloCentro }}</h6>
+            <p class="text-justify-content-center">{{ mi.textoCentro }}</p>
         </div>
         <div class="col-sm-4">
             <img src="{{ mi.imagenCentro.url }}" alt="animado" id="animado">
         </div>
     </div>
-
 
 </div>
 
@@ -81,7 +79,7 @@
     <section id="testimonials" class="hoc">
         <div class="row justify-content-center justify-content-sm-center">
             <div class="col-md-4">
-                <h6 class="heading font-x2 one_half mt-5 mb-3">SOBRE MÍ</h6>
+                <h6 class="heading font-x2 one_half mt-5 mb-3">{% trans 'SOBRE MÍ' %}</h6>
                 <article class="one_half first">
                     <figure class="clear"><img class="rounded-circle" src="{{ mi.imagenPerfil.url }}" alt=""></figure>
                 </article>
@@ -91,9 +89,13 @@
                 <article class="one_half">
                     <blockquote>{{ mi.textoPerfil }}</blockquote>
                 </article>
+
             </div>
+
         </div>
+
     </section>
+
 </div>
 
 

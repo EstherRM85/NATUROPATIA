@@ -22,8 +22,8 @@
     <nav class="navbar navbar-expand-xl navbar-default">
 
         <a class="navbar-brand d-flex align-items-center" href="{% url 'app:index' %}">
-            <img class="float-left" src="{% static 'img/unnamed.png' %}" alt="logo" style="width:110px;">
-            <h2 class="titulo_logo ml-3 ">Centro de Salud <br> &nbsp;&nbsp;&nbsp;&nbsp;Integrada</h2>
+
+            <img class="float-left" src="{{ mi.logo.url }}" alt="logo" style="width:220px;">
         </a>
 
         <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,11 +40,11 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'app:Tratamientos' %}">{% trans 'TRATAMIENTOS' %}</a>
+                    <a class="nav-link" href="{% url 'app:tratamientos' %}">{% trans 'TRATAMIENTOS' %}</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'app:patologias' %}">{% trans  'PATOLOGÍAS' %}</a>
+                    <a class="nav-link" href="{% url 'app:patologias' %}">{% trans 'PATOLOGÍAS' %}</a>
                 </li>
 
                 <li class="nav-item">
@@ -54,50 +54,51 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'app:testimonios' %}">{% trans 'TESTIMONIOS' %}</a>
                 </li>
-
-                <li class="idioma ml-5 mr-2">
-                    {% language 'en' %}
-                    <a class="" href="{% url 'app:index' %}">
-                        <i>EN</i>
-                    </a>
-                    {% endlanguage %}
-                </li>
-
-                <li class="idioma">
-                    {% language 'es' %}
-                    <a class="" href="{% url 'app:index' %}">
-                        <i>ES</i>
-                    </a>
-                    {% endlanguage %}
-                </li>
+                <div>
+                    <li class="idioma ml-5">
+                        {% language 'en' %}
+                        <a class="" href="{% url 'app:index' %}">
+                            <i>EN</i>
+                        </a>
+                        {% endlanguage %} {% language 'es' %}
+                        <a class="" href="{% url 'app:index' %}">
+                            <i>ES</i>
+                        </a>
+                        {% endlanguage %}
+                    </li>
+                </div>
             </ul>
         </div>
     </nav>
     {% block content%} {% endblock content %}
     <footer>
 
-        <div class="container-fluid d-flex justify-content-center footer mr-5  mt-5 iconos">
-            {% for p in contacto %}
-            <div>
-                <h6 class="text-uppercase font-weight-bold mr-5"> {{ p.nombreCentro }}</h6>
-                <p class="iconos">
-                    <i class="fas fa-home mr-5"></i>{{ p.direccion }}</p>
-                <p class="iconos">
-                    <i class="fas fa-envelope mr-5"></i>{{ p.mail }}</p>
-                <p class="iconos">
-                    <i class="fas fa-phone mr-5"></i>{{ p.tel }}</p>
+
+        <div class="container-fluid  justify-content-left footer mr-5 mt-5 iconos">
+            <div class="row">
+                {% for p in contacto %}
+                <div class="col-md-6">
+                    <h6 class="text-uppercase font-weight-bold ml-3"> {{ p.nombreCentro }}</h6>
+                    <p class="iconos ml-3">
+                        <i class="fas fa-home mr-3"></i>{{ p.direccion }}</p>
+                    <p class="iconos  ml-3" ">
+                        <i class="fas fa-envelope mr-3 "></i>{{ p.mail }}</p>
+                    <p class="iconos ml-3 ">
+                        <i class="fas fa-phone mr-3 "></i>{{ p.tel }}</p>
+                </div>
+
+                {% endfor %}
             </div>
-            {% endfor %}
 
         </div>
     </footer>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <script src="https://kit.fontawesome.com/94d365e8cc.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js "></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js "></script>
+    <script src="https://kit.fontawesome.com/94d365e8cc.js " crossorigin="anonymous "></script>
     <script src='https://img1.wsimg.com/tcc/tcc_l.combined.1.0.6.min.js '></script>
-    <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'js/main.js' %} "></script>
 </body>
 
 </html>

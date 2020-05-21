@@ -1,6 +1,6 @@
 {% extends 'base.html' %} {% load static %} {% load bootstrap4 %} {% block content%}
 <!-- Section: Testimonials v.4 -->
-<section class="text-center my-5">
+<section class="text-center my-5 fondo">
 
 
 
@@ -18,13 +18,7 @@
             </div>
             <!--Controls-->
 
-            <!--Indicators-->
-            <ol class="carousel-indicators">
-                <li data-target="#multi-item-example" data-slide-to="0" class="active light-blue darken-4"></li>
-                <li data-target="#multi-item-example" data-slide-to="1" class="light-blue darken-4"></li>
-                <li data-target="#multi-item-example" data-slide-to="2" class="light-blue darken-4"></li>
-            </ol>
-            <!--Indicators-->
+
 
             <!--Slides-->
             <div class="carousel-inner" role="listbox">
@@ -35,17 +29,19 @@
                     <div class="row justify-content-center">
                         {% endif %}
 
-                        <div class="col-md-3 mr-3 ml-3 justify-content-center">
+                        <div class="col-md-2 mr-3 ml-3 justify-content-center">
                             <div class="testimonial">
                                 <!--Avatar-->
                                 <div class="avatar mx-auto">
-                                    <img src="{{ p.imagen.url }}" class="rounded-circle img-fluid">
+                                    <div class="embed-responsive embed-responsive-16by9">
+                                        <img src="{{ p.imagen.url }}" class="img-fluid rounded-circle">
+                                    </div>
                                 </div>
                                 <!--Content-->
                                 <h4 class="font-weight-bold mt-4"> {{ p.nombre }}</h4>
 
                                 <h6 class="blue-text font-weight-bold my-3">{{ p.edad }}</h6>
-                                <p class="font-weight-normal"><i class="fas fa-quote-left pr-2"></i>{{p.descripcion}}</p>
+                                <p class="font-weight-normal"><i class="fas fa-quote-left pr-10"></i>{{p.descripcion}}<i class="fas fa-quote-right pr-10"></i></p>
                                 <!--Review-->
 
                             </div>

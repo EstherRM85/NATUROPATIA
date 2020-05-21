@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-28 12:01+0200\n"
+"POT-Creation-Date: 2020-05-21 12:12+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,26 +17,33 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\templates\app\index.html:40
+#: .\templates\app\index.html:62
+msgid "NUESTRO CENTRO"
+msgstr "OUR CENTER"
+
+#: .\templates\app\index.html:83
+msgid "SOBRE MÍ"
+msgstr "ABOUT ME"
+
+#: .\templates\base.html:38
 msgid "INICIO"
 msgstr "HOME"
 
-#: .\templates\app\index.html:44
+#: .\templates\base.html:42
 msgid "TRATAMIENTOS"
 msgstr "TREATMENTS"
 
-#: .\templates\app\index.html:48
+#: .\templates\base.html:46
 msgid "PATOLOGÍAS"
 msgstr "PATOLOGIES"
 
-#: .\templates\app\index.html:52
+#: .\templates\base.html:50
 msgid "BLOG"
 msgstr "BLOG"
 
-#: .\templates\app\index.html:56
+#: .\templates\base.html:54
 msgid "TESTIMONIOS"
 msgstr "TESTIMONIALS"
 
-#: .\templates\.\base.html:80
-msgid "Contacto"
-msgstr "Contact"
+#~ msgid "Contacto"
+#~ msgstr "Contact"

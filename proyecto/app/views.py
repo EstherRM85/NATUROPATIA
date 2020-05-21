@@ -18,6 +18,7 @@ class Index(TemplateView):
             
         context['mi']= Info.objects.all()[0]
         context['contacto']= Contacto.objects.all()
+        context['template']= 'app:index'
         
         return context
 
@@ -26,10 +27,14 @@ class Tratamientos(ListView):
     template_name = 'app/tratamientos.html'
     context_object_name= 'tra' 
     queryset = Tratamiento.objects.all()
+
     
     def get_context_data(self,**kwargs):
         context=super(Tratamientos, self).get_context_data(**kwargs)
         context['contacto']= Contacto.objects.all()
+        context['mi']= Info.objects.all()[0]
+        context['template']= 'app:tratamientos'
+        context['idTemp'] = ''
         return context
 
 
@@ -39,8 +44,12 @@ class Infotratamiento(DetailView):
 
     def get_context_data(self,**kwargs):
         context=super(Infotratamiento, self).get_context_data(**kwargs)
-        context['trat']= Tratamiento.objects.get(pk = self.kwargs.get('pk',None))
+        idTrat = self.kwargs.get('pk',None)
+        context['trat']= Tratamiento.objects.get(pk = idTrat)
         context['contacto']= Contacto.objects.all()
+        context['mi']= Info.objects.all()[0]
+        context['template']= 'app:infotratamiento'
+        context['idTemp'] = idTrat
         return context
 
 class Patologias(ListView):
@@ -53,7 +62,9 @@ class Patologias(ListView):
         context=super(Patologias, self).get_context_data(**kwargs)
         parametro = self.kwargs.get('pk', None)
         context['Psis'] = Sistema.objects.all() 
-        context['contacto']= Contacto.objects.all()         
+        context['contacto']= Contacto.objects.all() 
+        context['mi']= Info.objects.all()[0]
+        context['template']= 'app:patologias'        
         return context
     
     
@@ -68,6 +79,7 @@ class Blog(ListView):
         context=super(Blog, self).get_context_data(**kwargs)
         context['destacados']= EntradaBlog.objects.filter(destacados = True)[:4]
         context['contacto']= Contacto.objects.all()
+        context['mi']= Info.objects.all()[0]
         return context       
 
 
@@ -79,6 +91,7 @@ class InfoBlog(DetailView):
         context = super(InfoBlog, self).get_context_data(**kwargs)
         context['info'] = EntradaBlog.objects.get(pk = self.kwargs.get('pk',None))
         context['contacto']= Contacto.objects.all()
+        context['mi']= Info.objects.all()[0]
         return context
 
 
@@ -90,6 +103,8 @@ class Opiniones(ListView):
         context=super(Opiniones, self).get_context_data(**kwargs)
         context['opi']= Testimonio.objects.all()
         context['contacto']= Contacto.objects.all()
+        context['mi']= Info.objects.all()[0]
+        context['template']= 'app:testimonios'
         return context
     
 
