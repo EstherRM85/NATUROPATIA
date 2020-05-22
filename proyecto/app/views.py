@@ -34,7 +34,6 @@ class Tratamientos(ListView):
         context['contacto']= Contacto.objects.all()
         context['mi']= Info.objects.all()[0]
         context['template']= 'app:tratamientos'
-        context['idTemp'] = ''
         return context
 
 
@@ -80,6 +79,7 @@ class Blog(ListView):
         context['destacados']= EntradaBlog.objects.filter(destacados = True)[:4]
         context['contacto']= Contacto.objects.all()
         context['mi']= Info.objects.all()[0]
+        context['template']= 'app:blog'  
         return context       
 
 
@@ -89,9 +89,12 @@ class InfoBlog(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super(InfoBlog, self).get_context_data(**kwargs)
-        context['info'] = EntradaBlog.objects.get(pk = self.kwargs.get('pk',None))
+        idblog = self.kwargs.get('pk',None)
+        context['info'] = EntradaBlog.objects.get(pk = idblog)
         context['contacto']= Contacto.objects.all()
         context['mi']= Info.objects.all()[0]
+        context['template']= 'app:infoblog'
+        context['idTemp'] = idblog
         return context
 
 

@@ -1,6 +1,6 @@
 {% extends 'base.html' %} {% load static %} {% load bootstrap4 %} {% block content%}
 <!-- Section: Testimonials v.4 -->
-<section class="text-center my-5 fondo">
+<section class="text-center fondo">
 
 
 
@@ -8,11 +8,11 @@
     <div>
 
         <!--Carousel Wrapper-->
-        <div id="multi-item-example" class="carousel slide carousel-multi-item mb-5" data-ride="carousel">
+        <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
 
 
             <!--Controls-->
-            <div class="controls-top">
+            <div class="controls-top pt-3">
                 <a class="light-blue darken-4" href="#multi-item-example" data-slide="prev"><i class="fas fa-chevron-left mb-5"></i></a>
                 <a class="light-blue darken-4" href="#multi-item-example" data-slide="next"><i class="fas fa-chevron-right mb-5"></i></a>
             </div>
@@ -26,20 +26,20 @@
                 <!--First slide-->
                 {% for p in opi %} {% cycle 'start' '' '' as slidestart silent %} {% cycle '' '' 'end' as slideend silent %} {% if slidestart == 'start' %}
                 <div class="carousel-item {% if forloop.first %} active {% endif %}">
-                    <div class="row justify-content-center">
+                    <div class="row justify-content-around">
                         {% endif %}
 
-                        <div class="col-md-2 mr-3 ml-3 justify-content-center">
+                        <div class="col-md-2 mr-3 ml-3">
                             <div class="testimonial">
                                 <!--Avatar-->
                                 <div class="avatar mx-auto ">
-                                    <img src="{{ p.imagen.url }}" class="rounded-circle img-fluid">
+                                    <div class="imgTestimonio" style="background-image: url('{{ p.imagen.url }}')"></div> 
                                 </div>
                                 <!--Content-->
                                 <h4 class="font-weight-bold mt-4"> {{ p.nombre }}</h4>
 
                                 <h6 class="blue-text font-weight-bold my-3">{{ p.edad }}</h6>
-                                <p class="font-weight-normal"><i class="fas fa-quote-left pr-10"></i>{{p.descripcion}}<i class="fas fa-quote-right pr-10"></i></p>
+                                <p class="font-weight-normal testi pb-5"><i class="fas fa-quote-left pr-10"></i>{{p.descripcion}}<i class="fas fa-quote-right pr-10"></i></p>
                                 <!--Review-->
 
                             </div>

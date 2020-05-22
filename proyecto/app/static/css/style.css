@@ -26,8 +26,27 @@ img:hover {
 }
 
 .img-top {
-    width: 100%;
-    object-fit: cover;
+    height: 250px;
+    width: 250px;
+    /*los siguientes valores son independientes del tamaño del círculo */
+     background-repeat: no-repeat;
+    background-position: 50%;
+    border-radius: 50%;
+    background-size: 100% auto; 
+
+}
+
+.imgTestimonio{
+    height: 150px;
+    width: 150px;
+    /*los siguientes valores son independientes del tamaño del círculo */
+     background-repeat: no-repeat;
+    background-position: 50%;
+    border-radius: 50%;
+    background-size: 100% auto; 
+}
+.testi{
+    width:300px;
 }
 
 
@@ -166,7 +185,7 @@ img:hover {
 
 
 .heading.textoSobremi {
-    margin-top: 80px;
+    margin-top: 40px;
 }
 
 
