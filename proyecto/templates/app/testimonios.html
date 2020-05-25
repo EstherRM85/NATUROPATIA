@@ -29,19 +29,20 @@
                     <div class="row justify-content-around">
                         {% endif %}
 
-                        <div class="col-md-2 mr-3 ml-3">
+                        <div class="col-md-4">
                             <div class="testimonial">
                                 <!--Avatar-->
-                                <div class="avatar mx-auto ">
-                                    <div class="imgTestimonio" style="background-image: url('{{ p.imagen.url }}')"></div> 
+                                <div class="avatar mx-auto d-flex justify-content-center">
+                                    <div class="imgTestimonio" style="background-image: url('{{ p.imagen.url }}')"></div>
                                 </div>
                                 <!--Content-->
-                                <h4 class="font-weight-bold mt-4"> {{ p.nombre }}</h4>
+                                <h4 class="font-weight-bold mt-4 colorN"> {{ p.nombre }}</h4>
 
-                                <h6 class="blue-text font-weight-bold my-3">{{ p.edad }}</h6>
-                                <p class="font-weight-normal testi pb-5"><i class="fas fa-quote-left pr-10"></i>{{p.descripcion}}<i class="fas fa-quote-right pr-10"></i></p>
-                                <!--Review-->
-
+                                <h6 class="blue-text font-weight-bold my-3 colorN">Edad: {{ p.edad }}</h6>
+                                <div class="col-md-12">
+                                    <p class="font-weight-normal testi pb-3"><i class="fas fa-quote-left pr-10"></i>{{p.descripcion}}<i class="fas fa-quote-right pr-10"></i></p>
+                                    <!--Review-->
+                                </div>
                             </div>
                         </div>
                         <!-- Comprueba cierre de slide-->

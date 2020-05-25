@@ -64,30 +64,30 @@
 
     <div class="row justify-content-center ">
 
-        <div class="col-sm-4 ">
+        <div class="col-md-6 col-lg-4">
             <h6 class="heading font-x3 mr-5">{{ mi.tituloCentro }}</h6>
             <p class="text-justify-content-center">{{ mi.textoCentro }}</p>
         </div>
-        <div class="col-sm-4">
+        <div class="col-md-6 col-lg-4">
             <img src="{{ mi.imagenCentro.url }}" alt="animado" id="animado">
         </div>
     </div>
 
 </div>
 
-<div class="container-fluid mt-5"> 
-    <section id="testimonials" class="hoc"> 
-        <div class="row justify-content-center justify-content-md-center mb-5"> 
-            <div class="col-md-4"> 
-                <h6 class="heading font-x2 one_half mr-4 mt-5 mb-3">SOBRE MÍ</h6> 
-                   <div class="embed-responsive-4by3"> 
-                        <div class="img-top ml-5" style="background-image: url('{{ mi.imagenPerfil.url }}')"></div> 
-                    </div> 
-            </div> 
-            <div class="col-md-7 ml-2 mt-5"> 
-                <h6 class="heading textoSobremi mr-4">{{ mi.nombreDr }}</h6> 
-                <article class="one_half"> 
-                    <blockquote>{{ mi.textoPerfil }}</blockquote> 
+<div class="container-fluid mt-3">
+    <section id="testimonials" class="hoc">
+        <div class="row justify-content-center justify-content-md-center mb-5">
+            <div class="col-md-4">
+                <h6 class="heading font-x2 one_half mr-5 mt-5 mb-3">SOBRE MÍ</h6>
+                <div class="embed-responsive embed-responsive-1by1">
+                    <div class="img-top embed-responsive-item" style="background-image: url('{{ mi.imagenPerfil.url }}')"></div>
+                </div>
+            </div>
+            <div class="col-md-7 ml-2 mt-5">
+                <h6 class="heading textoSobremi mr-4">{{ mi.nombreDr }}</h6>
+                <article class="one_half">
+                    <blockquote>{{ mi.textoPerfil }}</blockquote>
                 </article>
 
             </div>

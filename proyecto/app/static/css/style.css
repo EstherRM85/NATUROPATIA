@@ -29,24 +29,20 @@ img:hover {
     height: 250px;
     width: 250px;
     /*los siguientes valores son independientes del tamaño del círculo */
-     background-repeat: no-repeat;
+    background-repeat: no-repeat;
     background-position: 50%;
     border-radius: 50%;
-    background-size: 100% auto; 
-
+    background-size: 100% auto;
 }
 
-.imgTestimonio{
+.imgTestimonio {
     height: 150px;
     width: 150px;
     /*los siguientes valores son independientes del tamaño del círculo */
-     background-repeat: no-repeat;
+    background-repeat: no-repeat;
     background-position: 50%;
     border-radius: 50%;
-    background-size: 100% auto; 
-}
-.testi{
-    width:300px;
+    background-size: 100% auto;
 }
 
 
@@ -73,18 +69,6 @@ img:hover {
 
 .navbar-brand {
     color: rgb(77, 184, 118);
-}
-
-.titulo_logo {
-    color: #16a374;
-    text-shadow: #4EBE7B 0.1em 0.1em 0.2em;
-    font-style: italic;
-}
-
-@media (max-width:400px) {
-    .titulo_logo {
-        font-size: 1.2em;
-    }
 }
 
 
@@ -183,9 +167,8 @@ img:hover {
     margin-left: 50px;
 }
 
-
 .heading.textoSobremi {
-    margin-top: 40px;
+    margin-top: 80px;
 }
 
 
@@ -202,7 +185,6 @@ img:hover {
     color: #7A7A7A;
     background-color: #e0f2f1;
     font-size: 20px;
-
 }
 
 
@@ -311,6 +293,10 @@ div.font-weight-normal {
     font-size: 20px;
     font-style: italic;
     color: #7A7A7A;
+}
+
+.colorN {
+    color: rgb(97, 95, 95);
 }
 
 

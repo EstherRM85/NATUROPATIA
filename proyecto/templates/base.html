@@ -26,8 +26,7 @@
             <img class="float-left" src="{{ mi.logo.url }}" alt="logo" style="width:220px;">
         </a>
 
-        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon">
                 <i class="fas fa-bars" style="color:rgb(77, 184, 118); font-size:28px;">
                 </i></span>
@@ -57,25 +56,19 @@
                 </li>
                 <div>
                     <li class="idioma ml-5">
-                        {% language 'en' %}
-                        {% if idTemp %}
+                        {% language 'en' %} {% if idTemp %}
                         <a class="" href="{% url template idTemp %}">
                             {% else %}
                             <a class="" href="{% url template %}">
                                 {% endif %}
                                 <i>EN</i>
-                            </a>
-                            {% endlanguage %}
-
-                            {% language 'es' %}
-                            {% if idTemp %}
-                            <a class="" href="{% url template idTemp %}">
+                            </a> {% endlanguage %} {% language 'es' %} {% if idTemp %}
+                        <a class="" href="{% url template idTemp %}">
                                 {% else %}
                                 <a class="" href="{% url template %}">
                                     {% endif %}
                                     <i>ES</i>
-                                </a>
-                                {% endlanguage %}
+                                </a> {% endlanguage %}
                     </li>
                 </div>
             </ul>
@@ -96,6 +89,14 @@
                         <i class="fas fa-envelope mr-3 "></i>{{ p.mail }}</p>
                     <p class="iconos ml-3 ">
                         <i class="fas fa-phone mr-3 "></i>{{ p.tel }}</p>
+                    <p class="iconos ml-3 ">
+                        <a href="{{ p.instagram }}">
+                            <img src="{% static '../media/static/img/instagram.png' %}" alt="New York" width="30" height="30"></a>
+                    </p>
+                    <p class="iconos ml-2 ">
+                        <a href="{{ p.facebook }}">
+                            <img src="{% static '../media/static/img/facebook.png' %}" alt="New York" width="40" height="40"></a>
+                    </p>
                 </div>
 
                 {% endfor %}

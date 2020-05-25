@@ -26,10 +26,13 @@ class Contacto(models.Model):
     tel = models.IntegerField(null= True,blank=True)
     mail = models.EmailField(null= True,blank=True)
     horario = models.IntegerField(null= True,blank=True)
+    instagram = models.URLField(null=True,blank=True)
+    facebook= models.URLField(null=True,blank=True)
     
     def __str__(self):         
         return self.nombreCentro
     
+        
     
 class Tratamiento(models.Model):
     nombre = models.CharField(max_length=80, null= True)
@@ -53,6 +56,9 @@ class Patologia(models.Model):
     sistema= models.ForeignKey(Sistema, related_name="patologias",on_delete=models.CASCADE, max_length=80, null= True )
     def __str__(self):         
         return self.nombrepatologia
+    
+    class Meta:
+        ordering = ['nombrepatologia_es']
 
 class Testimonio(models.Model):
     nombre = models.CharField(max_length=70)
