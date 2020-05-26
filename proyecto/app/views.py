@@ -16,7 +16,7 @@ class Index(TemplateView):
             lastvideo= Video.objects.all()[0]
             context['videofile']= lastvideo.videofile
             
-        context['mi']= Info.objects.all()[0]
+        context['mi']= Inicio.objects.all()[0]
         context['contacto']= Contacto.objects.all()
         context['template']= 'app:index'
         
@@ -32,7 +32,7 @@ class Tratamientos(ListView):
     def get_context_data(self,**kwargs):
         context=super(Tratamientos, self).get_context_data(**kwargs)
         context['contacto']= Contacto.objects.all()
-        context['mi']= Info.objects.all()[0]
+        context['mi']= Inicio.objects.all()[0]
         context['template']= 'app:tratamientos'
         return context
 
@@ -46,7 +46,7 @@ class Infotratamiento(DetailView):
         idTrat = self.kwargs.get('pk',None)
         context['trat']= Tratamiento.objects.get(pk = idTrat)
         context['contacto']= Contacto.objects.all()
-        context['mi']= Info.objects.all()[0]
+        context['mi']= Inicio.objects.all()[0]
         context['template']= 'app:infotratamiento'
         context['idTemp'] = idTrat
         return context
@@ -62,7 +62,7 @@ class Patologias(ListView):
         parametro = self.kwargs.get('pk', None)
         context['Psis'] = Sistema.objects.all() 
         context['contacto']= Contacto.objects.all() 
-        context['mi']= Info.objects.all()[0]
+        context['mi']= Inicio.objects.all()[0]
         context['template']= 'app:patologias'        
         return context
     
@@ -78,7 +78,7 @@ class Blog(ListView):
         context=super(Blog, self).get_context_data(**kwargs)
         context['destacados']= EntradaBlog.objects.filter(destacados = True)[:4]
         context['contacto']= Contacto.objects.all()
-        context['mi']= Info.objects.all()[0]
+        context['mi']= Inicio.objects.all()[0]
         context['template']= 'app:blog'  
         return context       
 
@@ -92,7 +92,7 @@ class InfoBlog(DetailView):
         idblog = self.kwargs.get('pk',None)
         context['info'] = EntradaBlog.objects.get(pk = idblog)
         context['contacto']= Contacto.objects.all()
-        context['mi']= Info.objects.all()[0]
+        context['mi']= Inicio.objects.all()[0]
         context['template']= 'app:infoblog'
         context['idTemp'] = idblog
         return context
@@ -106,7 +106,7 @@ class Opiniones(ListView):
         context=super(Opiniones, self).get_context_data(**kwargs)
         context['opi']= Testimonio.objects.all()
         context['contacto']= Contacto.objects.all()
-        context['mi']= Info.objects.all()[0]
+        context['mi']= Inicio.objects.all()[0]
         context['template']= 'app:testimonios'
         return context
     

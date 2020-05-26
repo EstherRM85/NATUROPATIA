@@ -4,7 +4,7 @@ from django.db import models
 # Create your models here.
 
 
-class Info(models.Model):
+class Inicio(models.Model):
     tituloPrincipal = models.CharField(max_length=80, null=True)
     logo = models.ImageField(upload_to='static/img')
     tituloCentro = models.CharField(max_length=80, null=True)
@@ -13,6 +13,10 @@ class Info(models.Model):
     nombreDr = models.CharField(max_length=80, null=True)
     textoPerfil = models.TextField(null=True)
     imagenPerfil = models.ImageField(upload_to='static/img')
+
+    class Meta:
+        verbose_name = 'Info Inicio'
+        verbose_name_plural = 'Info Inicio'
 
 
     def __str__(self):         
@@ -24,10 +28,11 @@ class Contacto(models.Model):
     nombreCentro =models.CharField(max_length=80, null=True)
     direccion = models.CharField(max_length=80, null=True)
     tel = models.IntegerField(null= True,blank=True)
+    horario = models.CharField(max_length=80, null=True)
     mail = models.EmailField(null= True,blank=True)
-    horario = models.IntegerField(null= True,blank=True)
     instagram = models.URLField(null=True,blank=True)
     facebook= models.URLField(null=True,blank=True)
+    
     
     def __str__(self):         
         return self.nombreCentro

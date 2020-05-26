@@ -24,8 +24,8 @@ class EntradaBlogTranslationOptions(TranslationOptions):
 class TestimonioTranslationOptions(TranslationOptions):
     fields = ('nombre', 'descripcion')
 
-@register(Info)
-class InfoTranslationOptions(TranslationOptions):
+@register(Inicio)
+class InicioTranslationOptions(TranslationOptions):
     fields = ('tituloPrincipal', 'tituloCentro','textoCentro','textoPerfil')
 
 @register(Contacto)

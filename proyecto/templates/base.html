@@ -85,21 +85,29 @@
                     <h6 class="text-uppercase font-weight-bold ml-3"> {{ p.nombreCentro }}</h6>
                     <p class="iconos ml-3">
                         <i class="fas fa-home mr-3"></i>{{ p.direccion }}</p>
+                   {% if p.mail %} 
                     <p class="iconos  ml-3">
-                        <i class="fas fa-envelope mr-3 "></i>{{ p.mail }}</p>
+                        <i class="fas fa-envelope mr-3 "></i>{{ p.mail }}</p>{% endif %}
                     <p class="iconos ml-3 ">
                         <i class="fas fa-phone mr-3 "></i>{{ p.tel }}</p>
-                    <p class="iconos ml-3 ">
+                    {% if p.horario %}
+                     <p class="iconos ml-3 ">
+                      <i class="far fa-clock mr-3"></i>{{ p.horario }}</p>{% endif %}
+                  {% if p.instagram %}
+                       <p>
                         <a href="{{ p.instagram }}">
                             <img src="{% static '../media/static/img/instagram.png' %}" alt="New York" width="30" height="30"></a>
                     </p>
+                    {% endif %}
+                  {% if p.facebook %}
                     <p class="iconos ml-2 ">
                         <a href="{{ p.facebook }}">
                             <img src="{% static '../media/static/img/facebook.png' %}" alt="New York" width="40" height="40"></a>
                     </p>
+                    {% endif %}
                 </div>
-
-                {% endfor %}
+ {% endfor %}
+     
             </div>
 
         </div>
