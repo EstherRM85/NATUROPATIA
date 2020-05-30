@@ -54,12 +54,11 @@ class Infotratamiento(DetailView):
 class Patologias(ListView):
     model = Patologia
     template_name = 'app/patologias.html'
-    context_object_name= 'pat' 
-    queryset = Patologia.objects.all()
+  
 
     def get_context_data(self,**kwargs):
         context=super(Patologias, self).get_context_data(**kwargs)
-        parametro = self.kwargs.get('pk', None)
+      
         context['Psis'] = Sistema.objects.all() 
         context['contacto']= Contacto.objects.all() 
         context['mi']= Inicio.objects.all()[0]

@@ -52,7 +52,6 @@ class Sistema(models.Model):
     nombresistema = models.CharField(max_length=80, null= True)
     def __str__(self):         
         return self.nombresistema
-    
     class Meta:
         ordering = ['nombresistema_es']
 
@@ -74,7 +73,6 @@ class Testimonio(models.Model):
 
     def __str__(self):         
         return self.nombre
-
 
     
 
